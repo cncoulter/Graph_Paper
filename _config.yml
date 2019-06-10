@@ -13,18 +13,35 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: Graph Paper
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+timezone: America/Los_Angeles
+description: >- # this means to ignore newlines until "baseurl:"
+    Graph Paper is a Jekyll template that incorporates Bootstrap. It's an easy and quick way to have a Jekyll website/blog with the Bootstrap grid already set up. Like graph paper, this provides you with a flexible grid for you to build off of.
+author: Cameron N. Coulter
+email: cam@cncoulter.com
+
+twitter:
+  username: camncoulter
+  card: summary
+
 twitter_username: jekyllrb
 github_username:  jekyll
 
+# Google Analytics
+# google_analytics: UA-XXXXXXXX-X
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+
 # Build settings
+permalink: /:year/:month/:day/:title/
 markdown: kramdown
 sass:
   sass_dir: css

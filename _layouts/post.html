@@ -1,27 +1,55 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<!-- Page Content-->
+<article>
+    <div class="container">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
-  </header>
+        <div class="row justify-content-center">
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+            <!-- Post Content Column -->
+            <div class="col-lg-8">
 
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
+                <!-- Title -->
+                <h2 class="mt-4">{{ page.title }}</h2>
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+                <!-- Author -->
+                <p class="lead">
+                    by {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}
+                </p>
+
+                <p class="text-muted">
+                    <!-- Date/Time -->
+                    Posted on {{ page.date | date: "%B %e, %Y" }}
+
+                    <!-- Post: Categories -->
+                    {% if page.categories != empty %}
+                    {% for category in page.categories %}
+                    <a href="{{ site.baseurl }}/blog/categories#{{ category }}" class="badge badge-primary mx-1">{{ category }}</a>
+                    {% endfor %}
+                    {% endif %}
+                </p>
+
+                <!-- Featured Image -->
+                {% if page.image %}
+                    <img src="{{ page.image }}" class="img-fluid mx-auto d-block mb-3" alt="{{ page.alt-text }}" title="{{ page.caption }}"/>
+                {% endif %}
+
+                <!-- Post Content -->
+                <div>{{ content }}</div>
+
+                <!-- Post Footer: Tags -->
+                {% if page.tags != empty %}
+                <p class="text-center">
+                    {% for tag in page.tags %}
+                    <a href="{{ site.baseurl }}/blog/tags#{{ tag }}" class="badge badge-primary m-1">{{ tag }}</a>
+                    {% endfor %}
+                </p>
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </div>
 </article>
