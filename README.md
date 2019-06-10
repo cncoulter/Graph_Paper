@@ -1,13 +1,16 @@
 # README
 
-Graph Paper is a Jekyll template that incorporates Bootstrap. It's meant to be an easy and quick way to have a Jekyll website/blog with the Bootstrap grid already set up. Like graph paper, this provides you with a flexible grid for you to build off of.
+Graph Paper is a Jekyll template that incorporates Bootstrap. It's meant to be an easy and quick way to have a Jekyll website/blog with the Bootstrap grid already set up. Like graph paper, this provides you with a flexible grid to build off of.
 
-As you can see, it's not quite complete yet.
+As you can see, it's not quite ready yet.
 
 ## Todo
 
-* Add font awesome
-* SEO
+* ~~Convert gem theme to regular theme~~
+* ~~Add Bootstrap support~~
+* ~~Remove (most of) Minima theme~~
+* ~~Add font awesome~~
+* SEO (add featured image support, w/ default for Twitter cards)
 * Add categories
 * Add tags
 * Add support for multiple authors
