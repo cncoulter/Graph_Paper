@@ -10,7 +10,8 @@ As you can see, it's not quite ready yet.
 * ~~Add Bootstrap support~~
 * ~~Remove (most of) Minima theme~~
 * ~~Add font awesome~~
-* SEO (add featured image support, w/ default for Twitter cards)
+* ~~Add awesome SEO support~~
+
 * Add categories
 * Add tags
 * Add support for multiple authors
