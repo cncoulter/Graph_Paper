@@ -10,9 +10,9 @@ As you can see, it's not quite ready yet.
 * ~~Add Bootstrap support~~
 * ~~Remove (most of) Minima theme~~
 * ~~Add font awesome~~
-* ~~Add awesome SEO support~~
+* ~~Add robust SEO support~~
+* ~~Add Favicon~~
 
-* https://jekyllrb.com/docs/front-matter/
 * Add categories
 * Add tags
 * Add support for multiple authors

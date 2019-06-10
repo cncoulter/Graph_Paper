@@ -13,25 +13,22 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Graph Paper
-url: "https://graph-paper.cncoulter.com" # the base hostname & protocol for your site, e.g. http://example.com
+title: Graph Paper # Required.
+url: "https://graph-paper.cncoulter.com" # Required. The base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
     Graph Paper is a Jekyll template that incorporates Bootstrap. It's an easy and quick way to have a Jekyll website/blog with the Bootstrap grid already set up. Like graph paper, this provides you with a flexible grid for you to build off of.
-locale: en_US
+locale: en_US # Required.
 timezone: America/Los_Angeles
-author: Cameron N. Coulter
+author: Cameron N. Coulter # Required.
 email: cam@cncoulter.com
 
 twitter: # Used for Twitter Cards
-  username: camncoulter # Twitter username for the website/publication
-  card: summary # "summary" or "summary_large_image"
+  username: camncoulter # Not required. Twitter username for the website/publication
+  card: summary # Required. "summary" or "summary_large_image"
 
-default_meta_image: /img/notepad-593363_1920.jpg # This is the default image used for Twitter Cards
-default_meta_image_alt: "graph paper and a pen"
-
-twitter_username: jekyllrb
-github_username:  jekyll
+default_meta_image: /img/notepad-593363_1920.jpg # Not required. This is the default image used for Twitter Cards
+default_meta_image_alt: "graph paper and a pen" # Not required.
 
 # Google Analytics
 # google_analytics: UA-XXXXXXXX-X

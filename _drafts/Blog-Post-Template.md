@@ -1,6 +1,7 @@
 ---
 layout: post
 permalink: /about/
+published: false
 title:  "Welcome to Jekyll!"
 date:   2019-06-08 10:15
 date_modified: 2019-06-08 10:30
