@@ -12,6 +12,7 @@ As you can see, it's not quite ready yet.
 * ~~Add font awesome~~
 * ~~Add awesome SEO support~~
 
+* https://jekyllrb.com/docs/front-matter/
 * Add categories
 * Add tags
 * Add support for multiple authors

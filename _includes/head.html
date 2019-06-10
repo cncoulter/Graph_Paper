@@ -55,6 +55,10 @@
 	    "@type": "ImageObject",
 	    "url": "{{ site.url }}{{ site.default_meta_image }}"
 	  },{% endif %}
+	  "publisher": {
+	      "@type": "Person",
+	      "name": "{% if site.author %}{{ site.author }}{% else %}Unknown{% endif %}"
+	    },
 	  "author": {
 		  "@type": "Person",
 		  "name": "{% if page.author.name %}{{ page.author.name }}{% elsif site.author %}{{ site.author }}{% else %}Unknown{% endif %}"

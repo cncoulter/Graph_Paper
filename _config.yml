@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Graph Paper
-url: "https://graphpaper.cncoulter.com/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://graph-paper.cncoulter.com/" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 description: >- # this means to ignore newlines until "baseurl:"
     Graph Paper is a Jekyll template that incorporates Bootstrap. It's an easy and quick way to have a Jekyll website/blog with the Bootstrap grid already set up. Like graph paper, this provides you with a flexible grid for you to build off of.
