@@ -9,16 +9,18 @@ As you can see, it's not quite ready yet.
 * ~~Convert gem theme to regular theme~~
 * ~~Add Bootstrap support~~
 * ~~Remove (most of) Minima theme~~
-* ~~Add font awesome~~
+* ~~Add Font Awesome~~
 * ~~Add robust SEO support~~
 * ~~Add Favicon~~
+* ~~Add categories~~
+* ~~Add tags~~
 
-* Add categories
-* Add tags
 * Add support for multiple authors
+* Paginate & archive
 * Add social media support
 * Add syntax highlighting
 * Design updates/beautify
-* Add contribute page
-* Paginate & archive
 * Add about this site
+* Add contribute page
+* Update fork page
+* Update homepage

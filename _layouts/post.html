@@ -18,34 +18,30 @@ layout: default
                     by {% if page.author.name %}{{ page.author.name }}{% else %}{{ site.author }}{% endif %}
                 </p>
 
-                <p class="text-muted">
-                    <!-- Date/Time -->
-                    Posted on {{ page.date | date: "%B %e, %Y" }}
+                <!-- Date/Time -->
+                <p class="text-muted">Posted on {{ page.date | date: "%B %e, %Y" }}</p>
 
-                    <!-- Post: Categories -->
-                    {% if page.categories != empty %}
+                <!-- Post: Categories -->
+                {% if page.categories != empty %}
+                    <p>Categories:
                     {% for category in page.categories %}
-                    <a href="{{ site.baseurl }}/blog/categories#{{ category }}" class="badge badge-primary mx-1">{{ category }}</a>
+                        <a href="{{ site.baseurl }}/blog/categories#{{ category }}" class="badge badge-tag mx-1"><i class="fas fa-folder-open"></i> {{ category }}</a>
                     {% endfor %}
-                    {% endif %}
-                </p>
+                    </p>
+                {% endif %}
 
-                <!-- Featured Image -->
-                {% if page.image %}
-                    <img src="{{ page.image }}" class="img-fluid mx-auto d-block mb-3" alt="{{ page.alt-text }}" title="{{ page.caption }}"/>
+                <!-- Post Footer: Tags -->
+                {% if page.tags != empty %}
+                    <p>Tags:
+                    {% for tag in page.tags %}
+                        <a href="{{ site.baseurl }}/blog/tags#{{ tag }}" class="badge badge-tag mx-1"><i class="fas fa-tag"></i> {{ tag }}</a>
+                    {% endfor %}
+                    </p>
                 {% endif %}
 
                 <!-- Post Content -->
                 <div>{{ content }}</div>
 
-                <!-- Post Footer: Tags -->
-                {% if page.tags != empty %}
-                <p class="text-center">
-                    {% for tag in page.tags %}
-                    <a href="{{ site.baseurl }}/blog/tags#{{ tag }}" class="badge badge-primary m-1">{{ tag }}</a>
-                    {% endfor %}
-                </p>
-                {% endif %}
 
             </div>
 

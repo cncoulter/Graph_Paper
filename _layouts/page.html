@@ -13,11 +13,6 @@ layout: default
                 <!-- Title -->
                 <h2 class="mt-4">{{ page.title | escape }}</h2>
 
-                <!-- Featured Image -->
-                {% if page.image %}
-                    <img src="{{ page.image }}" class="img-fluid mx-auto d-block mb-3" alt="{{ page.alt-text }}" title="{{ page.caption }}"/>
-                {% endif %}
-
                 <!-- Post Content -->
                 <div>{{ content }}</div>
 

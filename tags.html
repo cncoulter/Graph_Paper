@@ -1,0 +1,41 @@
+---
+layout: page
+permalink: /blog/tags/
+title: "Tags"
+---
+
+<!-- Initial Tag List -->
+{% assign tags_list = site.tags | sort %}
+
+<p class="text-center my-3">
+{% for tag in tags_list %}
+    <a href="{{ site.baseurl }}/blog/tags#{{ tag[0] }}" class="badge badge-tag">
+        <i class="fas fa-tag"></i>
+        {{ tag[0] }}
+    </a>
+{% endfor %}
+</p>
+
+<!-- List out all posts for each tag -->
+{% for tag in tags_list %}
+    <div id="{{ tag[0] }}" class="card my-3">
+        <div class="card-body">
+            <h4 class="card-title">{{ tag[0] }}</h4>
+            <ul class="card-text">
+            {% for post in tag.last %}
+                  <li><span class="font-weight-light text-muted">{{ post.date | date: "%e %B %Y" }}:</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="card-footer">
+            {% capture number_of_posts %}{{ tag[1].size }}{% endcapture %}
+            {% if number_of_posts == "1" %}
+                {{ tag[1].size }} post
+            {% else %}
+                {{ tag[1].size }} posts
+            {% endif %}
+        </div>
+    </div>
+{% endfor %}
+
+{% assign tags_list = nil %}

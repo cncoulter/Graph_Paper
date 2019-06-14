@@ -2,3 +2,16 @@
 ---
 
 @import 'bootstrap/bootstrap';
+
+.badge-tag {
+    color: $primary;
+    background-color: #FFF;
+    border: 1px solid $primary;
+}
+
+.badge-tag[href]:hover {
+    color: #FFF;
+    background-color: $primary;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
