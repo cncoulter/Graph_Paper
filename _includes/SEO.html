@@ -1,9 +1,8 @@
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="generator" content="Jekyll" />
-    <meta name="author" content="{% if page.author.name %}{{ page.author.name }}{% else %}{{ site.author }}{% endif %}" />
+    <meta name="author" content="{% if page.author %}{% assign author = site.people | where: 'code_name', page.author | first %}{{ author.title }}{% else %}{{ site.author }}{% endif %}" />
     {% if page.description or site.description  %}<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />{% endif %}
-
     <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="og:locale" content="{{ site.locale }}" />
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />

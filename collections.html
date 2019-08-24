@@ -1,0 +1,19 @@
+---
+layout: page
+permalink: /collections/
+title: Collections
+---
+
+<h3>Animals</h3>
+
+<ul>{% for animal in site.animals %}
+    <li><a href="{{ animal.url }}">{{ animal.title }}</a></li>
+{% endfor %}</ul>
+
+<h3>People</h3>
+
+<ul><p>{% for person in site.people %}
+    <li><a href="{{ person.url }}">{{ person.name }}</a></li>
+{% endfor %}</ul>
+
+<p>Meep.</p>

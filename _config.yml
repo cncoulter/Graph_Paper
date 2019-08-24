@@ -33,6 +33,16 @@ default_meta_image_alt: "graph paper and a pen" # Not required.
 # Google Analytics
 # google_analytics: UA-XXXXXXXX-X
 
+# Collections
+collections_dir: collections
+collections:
+    animals:
+        output: true
+        permalink: /animals/:title/
+    people:
+        output: true
+        permalink: /people/:title/
+
 # Defaults
 defaults:
   -

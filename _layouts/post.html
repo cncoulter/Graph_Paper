@@ -14,9 +14,12 @@ layout: default
                 <h2 class="mt-4">{{ page.title }}</h2>
 
                 <!-- Author -->
+                {% if page.author %}
                 <p class="lead">
-                    by {% if page.author.name %}{{ page.author.name }}{% else %}{{ site.author }}{% endif %}
+                    {% assign author = site.people | where: 'code_name', page.author | first %}
+                    by <a href="{{ author.url }}">{{ author.title }}</a>
                 </p>
+                {% endif %}
 
                 <!-- Date/Time -->
                 <p class="text-muted">Posted on {{ page.date | date: "%B %e, %Y" }}</p>
