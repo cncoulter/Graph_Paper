@@ -15,16 +15,28 @@ layout: default
 
                 <p>Position: <strong>{{ page.position }}</strong></p>
 
+                {% if page.website %}<p>Website: <a href="{{ page.website }}">{{ page.website }}</a></p>{% endif %}
+
+                {% if page.facebook %}<p>Facebook: <a href="https://facebook.com/{{ page.facebook }}">https://facebook.com/{{ page.facebook }}</a></p>{% endif %}
+
+                {% if page.twitter %}<p>Twitter: <a href="https://twitter.com/{{ page.twitter }}">https://twitter.com/{{ page.twitter }}</a></p>{% endif %}
+
+                {% if page.linkedin %}<p>LinkedIn: <a href="https://www.linkedin.com/in/{{ page.linkedin }}">https://www.linkedin.com/in/{{ page.linkedin }}</a></p>{% endif %}
+
+                {% if page.github %}<p>Github: <a href="https://github.com/{{ page.github }}">https://github.com/{{ page.github }}</a></p>{% endif %}
+
                 <!-- Post Content -->
                 <div>{{ content }}</div>
 
-                <h2>Posts</h2>
-                <ul>
-                  {% assign filtered_posts = site.posts | where: 'author', page.code_name %}
-                  {% for post in filtered_posts %}
-                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-                  {% endfor %}
-                </ul>
+                {% assign filtered_posts = site.posts | where: 'author', page.code_name %}
+                {% if filtered_posts.size != 0 %}
+                    <h2>Posts</h2>
+                    <ul>
+                        {% for post in filtered_posts %}
+                            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
 
             </div>
 

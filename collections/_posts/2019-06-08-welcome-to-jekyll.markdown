@@ -4,7 +4,7 @@ published: true
 title: "Welcome to Jekyll!"
 date: 2019-06-08 09:15
 date_modified: 2019-06-08 13:30
-author: jane # This should be a person's code_name from your people collection
+author: cam # This should be a person's code_name from your people collection
 description: My first post.
 categories:
 - category 1

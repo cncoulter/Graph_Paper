@@ -14,8 +14,9 @@ As you can see, it's not quite ready yet.
 * ~~Add Favicon~~
 * ~~Add categories~~
 * ~~Add tags~~
+* ~~Implement collections~~
+* ~~Add support for multiple authors~~
 
-* Add support for multiple authors
 * Paginate & archive
 * Add social media support
 * Add syntax highlighting

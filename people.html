@@ -1,0 +1,11 @@
+---
+layout: page
+permalink: /people/
+title: People
+---
+
+<ul>
+    {% for person in site.people %}
+        <li><a href="{{ person.url }}">{{ person.title }}</a></li>
+    {% endfor %}
+</ul>

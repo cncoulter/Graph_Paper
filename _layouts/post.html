@@ -45,8 +45,13 @@ layout: default
                 <!-- Post Content -->
                 <div>{{ content }}</div>
 
-
-            </div>
+                <!-- Author Bio -->
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <h4 class="card-title">About {{ author.title }}</h4>
+                        <p class="card-text">{{ author | markdownify }}</p>
+                    </div>
+                </div>
 
         </div>
 
