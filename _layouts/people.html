@@ -13,17 +13,9 @@ layout: default
                 <!-- Title -->
                 <h2 class="mt-4">{{ page.title }}</h2>
 
+                {%- include socialmedia_page.html -%}
+
                 <p>Position: <strong>{{ page.position }}</strong></p>
-
-                {% if page.website %}<p>Website: <a href="{{ page.website }}">{{ page.website }}</a></p>{% endif %}
-
-                {% if page.facebook %}<p>Facebook: <a href="https://facebook.com/{{ page.facebook }}">https://facebook.com/{{ page.facebook }}</a></p>{% endif %}
-
-                {% if page.twitter %}<p>Twitter: <a href="https://twitter.com/{{ page.twitter }}">https://twitter.com/{{ page.twitter }}</a></p>{% endif %}
-
-                {% if page.linkedin %}<p>LinkedIn: <a href="https://www.linkedin.com/in/{{ page.linkedin }}">https://www.linkedin.com/in/{{ page.linkedin }}</a></p>{% endif %}
-
-                {% if page.github %}<p>Github: <a href="https://github.com/{{ page.github }}">https://github.com/{{ page.github }}</a></p>{% endif %}
 
                 <!-- Post Content -->
                 <div>{{ content }}</div>

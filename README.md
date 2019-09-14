@@ -16,12 +16,15 @@ As you can see, it's not quite ready yet.
 * ~~Add tags~~
 * ~~Implement collections~~
 * ~~Add support for multiple authors~~
+* ~~Add social media support~~
 
+* RSS feeds by author
 * Paginate & archive
-* Add social media support
-* Add syntax highlighting
+
 * Design updates/beautify
 * Add about this site
 * Add contribute page
 * Update fork page
 * Update homepage
+
+* Add syntax highlighting

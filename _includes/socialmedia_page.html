@@ -1,0 +1,83 @@
+<ul class="list-inline">
+
+    {% if page.website %}
+        <li class="list-inline-item">
+            <a href="{{ page.website }}" data-toggle="tooltip" data-placement="bottom" title="Website">
+                <i class="fas fa-user-circle"></i>
+            </a>
+        </li>
+    {% endif %}
+
+    {% if page.facebook %}
+        <li class="list-inline-item">
+            <a href="https://facebook.com/{{ page.facebook }}" data-toggle="tooltip" data-placement="bottom" title="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </li>
+    {% endif %}
+
+    {% if page.instagram %}
+        <li class="list-inline-item">
+            <a href="https://instagram.com/{{ page.instagram }}" data-toggle="tooltip" data-placement="bottom" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </li>
+    {% endif %}
+
+    {% if page.twitter %}
+        <li class="list-inline-item">
+            <a href="https://twitter.com/{{ page.twitter }}" data-toggle="tooltip" data-placement="bottom" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+    {% endif %}
+
+    {% if page.youtube %}
+        <li class="list-inline-item">
+            <a href="https://youtube.com/{{ page.youtube }}" data-toggle="tooltip" data-placement="bottom" title="Youtube">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </li>
+    {% endif %}
+
+    {% if page.spotify %}
+        <li class="list-inline-item">
+            <a href="https://spotify.com/{{ page.spotify }}" data-toggle="tooltip" data-placement="bottom" title="Spotify">
+                <i class="fab fa-spotify"></i>
+            </a>
+        </li>
+    {% endif %}
+
+    {% if page.bandcamp %}
+        <li class="list-inline-item">
+            <a href="https://bandcamp.com/{{ page.bandcamp }}" data-toggle="tooltip" data-placement="bottom" title="Bandcamp">
+                <i class="fab fa-bandcamp"></i>
+            </a>
+        </li>
+    {% endif %}
+
+    {% if page.linkedin %}
+        <li class="list-inline-item">
+            <a href="https://linkedin.com/in/{{ page.linkedin }}" data-toggle="tooltip" data-placement="bottom" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </li>
+    {% endif %}
+
+    {% if page.github %}
+        <li class="list-inline-item">
+            <a href="https://github.com/{{ page.github }}" data-toggle="tooltip" data-placement="bottom" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </li>
+    {% endif %}
+
+    {% if page.email %}
+        <li class="list-inline-item">
+            <a href="mailto:{{ page.email }}" data-toggle="tooltip" data-placement="bottom" title="Email">
+                <i class="far fa-envelope"></i>
+            </a>
+        </li>
+    {% endif %}
+
+</ul>

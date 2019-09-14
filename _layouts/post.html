@@ -48,8 +48,9 @@ layout: default
                 <!-- Author Bio -->
                 <div class="card bg-light">
                     <div class="card-body">
-                        <h4 class="card-title">About {{ author.title }}</h4>
+                        <h4 class="card-title">About <a href="{{ author.url }}">{{ author.title }}</a></h4>
                         <p class="card-text">{{ author | markdownify }}</p>
+                        <span class="text-center">{%- include socialmedia_post.html -%}</span>
                     </div>
                 </div>
 
