@@ -4,6 +4,7 @@ title: Cam N. Coulter
 code_name: cam
 position: Designer
 website: https://www.cncoulter.com/
+email: cam@cncoulter.com
 twitter: camncoulter
 linkedin: cameronncoulter
 github: cncoulter

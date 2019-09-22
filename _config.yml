@@ -22,6 +22,7 @@ locale: en_US # Required.
 timezone: America/Los_Angeles
 author: Cameron N. Coulter # Required.
 email: cam@cncoulter.com
+copyright: "Some rights reserved." # Required.
 
 twitter: # Used for Twitter Cards
   username: camncoulter # Not required. Twitter username for the website/publication
@@ -36,9 +37,6 @@ default_meta_image_alt: "graph paper and a pen" # Not required.
 # Collections
 collections_dir: collections
 collections:
-    animals:
-        output: true
-        permalink: /animals/:title/
     people:
         output: true
         permalink: /people/:title/
@@ -57,7 +55,6 @@ markdown: kramdown
 sass:
   sass_dir: css
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
   - jekyll-redirect-from
 

@@ -17,8 +17,9 @@ As you can see, it's not quite ready yet.
 * ~~Implement collections~~
 * ~~Add support for multiple authors~~
 * ~~Add social media support~~
+* ~~Custom RSS feed~~
 
-* RSS feeds by author
+* RSS feeds by author (& better RSS/atom support)
 * Paginate & archive
 
 * Design updates/beautify

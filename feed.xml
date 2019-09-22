@@ -1,0 +1,37 @@
+---
+layout: null
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <generator uri="https://jekyllrb.com/">Jekyll</generator>
+    <link type="application/atom+xml" href="{{ site.url }}/feed.xml" rel="self"/>
+    <link type="text/html" href="{{ site.url }}/" rel="alternate"/>
+    <id>{{ site.url }}</id>
+    <title type="text" xml:lang="en">{{ site.title }}</title>
+    <subtitle>{{ site.description }}</subtitle>
+    <author>
+        <name>{{ site.author }}</name>
+    </author>
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+    <icon>{{ site.url }}/img/favicon.ico</icon>
+    <rights>Copyright © {{ site.time | date: "%Y" }} {{ site.author }}. {{ site.copyright }}</rights>
+
+    {% for post in site.posts %}
+        <entry>
+            <title>{{ post.title }}</title>
+            {% assign post_author = site.people | where: 'code_name', post.author | first %}
+            <author>
+                <name>{{ post_author.title }}</name>
+                <uri>{{ post_author.website }}</uri>
+                <email>{{ post_author.email }}</email>
+            </author>
+            <link href="home_url{{ post.url }}"/>
+            <published>{{ post.date | date_to_xmlschema }}</published>
+            <updated>{{ post.date_modified | date_to_xmlschema }}</updated>
+            <id>{{ site.url }}{{ post.id }}</id>
+            {% if post.description  %}<summary type="html">{{ post.description | xml_escape }}</summary>{% endif %}
+            <content type="html">{{ post.content | xml_escape }}</content>
+        </entry>
+    {% endfor %}
+</feed>
