@@ -7,7 +7,7 @@ layout: null
     <generator uri="https://jekyllrb.com/">Jekyll</generator>
     <link type="application/atom+xml" href="{{ site.url }}/feed.xml" rel="self"/>
     <link type="text/html" href="{{ site.url }}/" rel="alternate"/>
-    <id>{{ site.url }}</id>
+    <id>{{ site.url }}/</id>
     <title type="text" xml:lang="en">{{ site.title }}</title>
     <subtitle>{{ site.description }}</subtitle>
     <author>
