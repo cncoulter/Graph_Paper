@@ -26,7 +26,7 @@ layout: null
                 <uri>{{ post_author.website }}</uri>
                 <email>{{ post_author.email }}</email>
             </author>
-            <link href="home_url{{ post.url }}"/>
+            <link href="{{ site.url }}{{ post.url }}"/>
             <published>{{ post.date | date_to_xmlschema }}</published>
             <updated>{{ post.date_modified | date_to_xmlschema }}</updated>
             <id>{{ site.url }}{{ post.id }}</id>
