@@ -1,0 +1,42 @@
+---
+layout: null
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+
+{% assign author = site.people | where: "cam", page.author | first %}
+{% comment %} In the above line, change "cam" to the author's code_name. {% endcomment %}
+
+{% assign filtered_posts = site.posts | where: 'author', author.code_name %}
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <generator uri="https://jekyllrb.com/">Jekyll</generator>
+    <link type="application/atom+xml" href="{{ site.url }}/feed.xml" rel="self"/>
+    <link type="text/html" href="{{ site.url }}/" rel="alternate"/>
+    <id>{{ site.url }}/</id>
+    <title type="text" xml:lang="en">{{ author.title }} — {{ site.title }}</title>
+    <subtitle>Posts by {{ author.title }} on {{ site.title }}</subtitle>
+    <author>
+        <name>{{ author.title }}</name>
+    </author>
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+    <icon>{{ site.url }}/img/favicon.ico</icon>
+    <rights>Copyright © {{ site.time | date: "%Y" }} {{ site.author }}. {{ site.copyright }}</rights>
+
+    {% for post in filtered_posts %}
+        <entry>
+            <title>{{ post.title }}</title>
+            <author>
+                <name>{{ author.title }}</name>
+                <uri>{{ author.website }}</uri>
+                <email>{{ author.email }}</email>
+            </author>
+            <link href="{{ site.url }}{{ post.url }}"/>
+            <published>{{ post.date | date_to_xmlschema }}</published>
+            <updated>{{ post.date_modified | date_to_xmlschema }}</updated>
+            <id>{{ site.url }}{{ post.id }}</id>
+            {% if post.description  %}<summary type="html">{{ post.description | xml_escape }}</summary>{% endif %}
+            <content type="html">{{ post.content | xml_escape }}</content>
+        </entry>
+    {% endfor %}
+</feed>

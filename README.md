@@ -18,8 +18,8 @@ As you can see, it's not quite ready yet.
 * ~~Add support for multiple authors~~
 * ~~Add social media support~~
 * ~~Custom RSS feed~~
+* ~~RSS feeds by author (& better RSS/atom support)~~
 
-* RSS feeds by author (& better RSS/atom support)
 * Paginate & archive
 
 * Design updates/beautify

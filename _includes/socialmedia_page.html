@@ -80,4 +80,12 @@
         </li>
     {% endif %}
 
+    {% if page.feed %}
+        <li class="list-inline-item">
+            <a href="{{ page.url }}/feed.xml" data-toggle="tooltip" data-placement="bottom" title="Feed">
+                <i class="fas fa-rss"></i>
+            </a>
+        </li>
+    {% endif %}
+
 </ul>
