@@ -3,7 +3,7 @@
     {% if author.website %}
         <li class="list-inline-item">
             <a href="{{ author.website }}" data-toggle="tooltip" data-placement="bottom" title="Website">
-                <i class="fas fa-user-circle"></i>
+                <i class="fas fa-globe-americas"></i>
             </a>
         </li>
     {% endif %}
@@ -28,6 +28,14 @@
         <li class="list-inline-item">
             <a href="https://twitter.com/{{ author.twitter }}" data-toggle="tooltip" data-placement="bottom" title="Twitter">
                 <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+    {% endif %}
+
+    {% if author.patreon %}
+        <li class="list-inline-item">
+            <a href="https://www.patreon.com/{{ author.patreon }}" data-toggle="tooltip" data-placement="bottom" title="Patreon">
+                <i class="fab fa-patreon"></i>
             </a>
         </li>
     {% endif %}

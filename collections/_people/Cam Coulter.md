@@ -8,6 +8,7 @@ email: cam@cncoulter.com
 twitter: camncoulter
 linkedin: cameronncoulter
 github: cncoulter
+patreon: skiffyandfanty
 feed: yes
 ---
 
