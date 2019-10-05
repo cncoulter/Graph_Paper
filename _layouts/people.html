@@ -17,17 +17,30 @@ layout: default
 
                 <p>Position: <strong>{{ page.position }}</strong></p>
 
-                <!-- Post Content -->
+                <!-- Bio -->
                 <div>{{ content }}</div>
 
+                <!-- List all blog posts by person -->
                 {% assign filtered_posts = site.posts | where: 'author', page.code_name %}
                 {% if filtered_posts.size != 0 %}
-                    <h2>Posts</h2>
-                    <ul>
+                <div class="card my-3">
+                    <div class="card-body">
+                        <h4 class="card-title">Posts by {{ page.title }}</h4>
+                        <ul class="card-text">
                         {% for post in filtered_posts %}
-                            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                              <li><span class="font-weight-light text-muted">{{ post.date | date: "%e %B %Y" }}:</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
                         {% endfor %}
-                    </ul>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        {% capture number_of_posts %}{{ filtered_posts.size }}{% endcapture %}
+                        {% if number_of_posts == "1" %}
+                            {{ number_of_posts }} post
+                        {% else %}
+                            {{ number_of_posts }} posts
+                        {% endif %}
+                    </div>
+                </div>
                 {% endif %}
 
             </div>
