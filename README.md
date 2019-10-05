@@ -19,8 +19,11 @@ As you can see, it's not quite ready yet.
 * ~~Add social media support~~
 * ~~Custom RSS feed~~
 * ~~RSS feeds by author (& better RSS/atom support)~~
-
-* Paginate & archive
+* ~~Paginate~~
+* Customize blog archive options (comment out; full post, excerpt, and description)
+* Add comments
+* Add featured images
+* Add author photos
 
 * Design updates/beautify
 * Add about this site
