@@ -4,8 +4,23 @@ permalink: /people/
 title: People
 ---
 
-<ul>
+<ul class="list-unstyled">
     {% for person in site.people %}
-        <li><a href="{{ person.url }}">{{ person.title }}</a></li>
+        {% if person.photo %}
+            <li class="media">
+                <a href="{{ person.url }}" title="View Profile"><img src="{{ person.photo }}" class="mr-3 rounded" width="75" alt="Author photo"></a>
+                <div class="media-body">
+                  <a href="{{ person.url }}"><h5 class="mt-0 mb-1">{{ person.title }}</h5></a>
+                  {{ person.content }}
+                </div>
+            </li>
+        {% else %}
+        <li class="media">
+            <div class="media-body">
+              <a href="{{ person.url }}"><h5 class="mt-0 mb-1">{{ person.title }}</h5></a>
+              {{ person.content }}
+            </div>
+        </li>
+        {% endif %}
     {% endfor %}
 </ul>

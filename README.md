@@ -22,8 +22,9 @@ As you can see, it's not quite ready yet.
 * ~~Paginate~~
 * ~~Customize blog archive options (comment out; full post, excerpt, and description)~~
 * ~~Add comments~~
+* ~~Add author photos~~
+
 * Add featured images
-* Add author photos
 
 * Design updates/beautify
 * Add about this site

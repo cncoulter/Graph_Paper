@@ -10,15 +10,25 @@ layout: default
             <!-- Post Content Column -->
             <div class="col-lg-8">
 
-                <!-- Title -->
-                <h2 class="mt-4">{{ page.title }}</h2>
-
-                {%- include socialmedia_page.html -%}
-
-                <p>Position: <strong>{{ page.position }}</strong></p>
+                <!-- Photo, Name, & Position-->
+                {% if page.photo %}
+                    <div class="media mt-4">
+                      <img src="{{ site.url }}{{ page.photo }}" alt="Author photo" class="align-self-start mr-3 rounded" width="75">
+                      <div class="media-body">
+                        <h2 class="mt-0">{{ page.title }}</h2>
+                        <p>Position: <strong>{{ page.position }}</strong></p>
+                      </div>
+                    </div>
+                {% else %}
+                    <h2 class="mt-4">{{ page.title }}</h2>
+                    <p>Position: <strong>{{ page.position }}</strong></p>
+                {% endif %}
 
                 <!-- Bio -->
-                <div>{{ content }}</div>
+                <div class="mt-2">{{ content }}</div>
+
+                <!-- Web/Social Media Links/Profiles -->
+                <span class="text-center">{%- include socialmedia_page.html -%}</span>
 
                 <!-- List all blog posts by person -->
                 {% assign filtered_posts = site.posts | where: 'author', page.code_name %}

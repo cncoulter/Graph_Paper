@@ -48,9 +48,22 @@ layout: default
                 <!-- Author Bio -->
                 <div class="card bg-light">
                     <div class="card-body">
+
+                    {% if author.photo %}
+                        <div class="media">
+                          <a href="{{ author.url }}" title="View Profile"><img src="{{ site.url }}{{ author.photo }}" alt="Author photo" class="align-self-start mr-3 rounded" width="75"></a>
+                          <div class="media-body">
+                            <h5 class="mt-0">About <a href="{{ author.url }}">{{ author.title }}</a></h5>
+                            {{ author | markdownify }}
+                          </div>
+                        </div>
+                    {% else %}
                         <h4 class="card-title">About <a href="{{ author.url }}">{{ author.title }}</a></h4>
                         <p class="card-text">{{ author | markdownify }}</p>
-                        <span class="text-center">{%- include socialmedia_post.html -%}</span>
+                    {% endif %}
+
+                    <span class="text-center">{%- include socialmedia_post.html -%}</span>
+
                     </div>
                 </div>
 
