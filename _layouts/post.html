@@ -54,6 +54,11 @@ layout: default
                     </div>
                 </div>
 
+                <!-- Comments -->
+                {% if site.disqus.shortname %}
+                    {% include disqus_comments.html %}
+                {% endif %}
+
         </div>
 
     </div>

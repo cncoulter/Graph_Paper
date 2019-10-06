@@ -20,8 +20,8 @@ As you can see, it's not quite ready yet.
 * ~~Custom RSS feed~~
 * ~~RSS feeds by author (& better RSS/atom support)~~
 * ~~Paginate~~
-* Customize blog archive options (comment out; full post, excerpt, and description)
-* Add comments
+* ~~Customize blog archive options (comment out; full post, excerpt, and description)~~
+* ~~Add comments~~
 * Add featured images
 * Add author photos
 

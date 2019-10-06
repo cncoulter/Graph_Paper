@@ -12,6 +12,7 @@ categories:
 tags:
 - tag 1
 - tag 2
+comments: false
 ---
 
 Eight.

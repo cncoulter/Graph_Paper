@@ -5,13 +5,29 @@ title: Blog
 
 <!-- Loop through the paginated posts -->
 {% for post in paginator.posts %}
+
     <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-    <p class="author">
-        <span class="date">{{ post.date }}</span>
+
+    <!-- Author -->
+    {% if post.author %}
+    <p class="lead">
+        {% assign author = site.people | where: 'code_name', post.author | first %}
+        by <a href="{{ author.url }}">{{ author.title }}</a>
     </p>
-    <div class="content">
-        {{ post.content }}
-    </div>
+    {% endif %}
+
+    <p><i class="far fa-calendar-alt"></i> {{ post.date | date_to_rfc822 }}</p>
+
+    <!-- List the post description -->
+    <!-- <p>{{ post.description | markdownify }}</p> -->
+
+    <!-- Alternatively, you can use an except, which by default is the first paragraph of the post -->
+    <p>{{ post.excerpt }}</p>
+    <p><a href="{{ post.url }}">[Read more…]</a></p>
+
+    <!-- Alternatively, you can display the entire blog post -->
+    <!-- {{ post.content }} -->
+
 {% endfor %}
 
 <!-- Pagination links -->
