@@ -23,8 +23,9 @@ As you can see, it's not quite ready yet.
 * ~~Customize blog archive options (comment out; full post, excerpt, and description)~~
 * ~~Add comments~~
 * ~~Add author photos~~
+* ~~Add featured images~~
 
-* Add featured images
+* Allow featured images to work without metadata note
 
 * Design updates/beautify
 * Add about this site

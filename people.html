@@ -4,18 +4,6 @@ permalink: /people/
 title: People
 ---
 
-{% for image in site.images %}
-     <img src="{{ image.title }}" />
-{% endfor %}
-
-<ul class="list-unstyled">
-    {% for image in site.images %}
-        <p>Something exists!</p>
-        <img src="{{ image.title }}" class="img-fluid" alt="TK">
-    {% endfor %}
-</ul>
-
-
 <ul class="list-unstyled">
     {% for person in site.people %}
         {% if person.photo %}

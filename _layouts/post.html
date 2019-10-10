@@ -22,13 +22,15 @@ layout: default
                 {% endif %}
 
                 <!-- Date/Time -->
-                <p class="text-muted">Posted on {{ page.date | date: "%B %e, %Y" }}</p>
+                <p class="text-muted"><i class="far fa-calendar"></i> Posted on {{ page.date | date: "%B %e, %Y" }}</p>
 
                 <!-- Featured Image -->
                 {% if page.image %}
                     {% assign featured_image = site.images | where: 'title', page.image | first %}
-                    <img src="{{ site.baseurl }}/img/{{ featured_image.title }}" class="img-fluid" alt="{{ featured_image.alt-text }}" title="{{ featured_image.caption }}">
-                    <p>{{ featured_image.content | markdownify }}</p>
+                    <figure class="figure">
+                        <img src="{{ site.baseurl }}/img/{{ featured_image.title }}" class="figure-img img-fluid" alt="{{ featured_image.alt-text }}" title="{{ featured_image.caption }}">
+                        <figcaption class="figure-caption">{{ featured_image.content }}</figcaption>
+                    </figure>
                 {% endif %}
 
                 <!-- Post: Categories -->
