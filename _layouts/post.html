@@ -24,6 +24,13 @@ layout: default
                 <!-- Date/Time -->
                 <p class="text-muted">Posted on {{ page.date | date: "%B %e, %Y" }}</p>
 
+                <!-- Featured Image -->
+                {% if page.image %}
+                    {% assign featured_image = site.images | where: 'title', page.image | first %}
+                    <img src="{{ site.baseurl }}/img/{{ featured_image.title }}" class="img-fluid" alt="{{ featured_image.alt-text }}" title="{{ featured_image.caption }}">
+                    <p>{{ featured_image.content | markdownify }}</p>
+                {% endif %}
+
                 <!-- Post: Categories -->
                 {% if page.categories != empty %}
                     <p>Categories:

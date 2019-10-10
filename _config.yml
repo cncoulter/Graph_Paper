@@ -40,9 +40,11 @@ collections:
     people:
         output: true
         permalink: /people/:title/
+    images:
+        output: false
 
 # Pagination
-paginate: 1
+paginate: 3
 paginate_path: "/blog/page:num/"
 
 # Disqus Comments
