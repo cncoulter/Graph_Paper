@@ -2,7 +2,8 @@
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="generator" content="Jekyll" />
     <meta name="author" content="{% if page.author %}{% assign author = site.people | where: 'code_name', page.author | first %}{{ author.title }}{% else %}{{ site.author }}{% endif %}" />
-    {% if page.description or site.description  %}<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />{% endif %}
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+
     <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="og:locale" content="{{ site.locale }}" />
     <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
@@ -11,41 +12,64 @@
     {% if page.layout == 'post' or page.layout == 'page' %}<meta property="og:type" content="article" />{% else %}<meta property="og:type" content="website" />{% endif %}
     {% if page.date %}<meta property="article:published_time" content="{{ page.date | date: "%Y-%m-%dT%H:%M:%S%z" }}" />{% endif %}
     {% if page.date_modified %}<meta property="article:modified_time" content="{{ page.date_modified | date: "%Y-%m-%dT%H:%M:%S%z" }}">{% endif %}
-    {% if page.author.name %}<meta property="article:author" content="{{ page.author.name }}">{% elsif site.author %}<meta property="article:author" content="{{ site.author }}">{% endif %}
-    {% if page.meta_image %}<meta property="og:image" content="{{ site.url }}{{ page.meta_image }}">
-    {% if page.meta_image_alt %}<meta property="og:image:alt" content="{{ page.meta_image_alt }}" />{% endif %}
-    {% elsif site.default_meta_image %}<meta property="og:image" content="{{ site.url }}{{ site.default_meta_image }}">
-    {% if site.default_meta_image_alt %}<meta property="og:image:alt" content="{{ site.default_meta_image_alt }}" />{% endif %}{% endif %}
-
+    {% if page.author %}
+        {% assign author = site.people | where: 'code_name', page.author | first %}
+        <meta property="article:author" content="{{ author.title }}">
+    {% else %}
+        <meta property="article:author" content="{{ site.author }}">
+    {% endif %}
+    {% if page.image %}
+        {% assign featured_image = site.images | where: 'title', page.image | first %}
+        <meta property="og:image" content="{{ site.url }}/img/{{ featured_image.title }}">
+        <meta property="og:image:alt" content="{{ featured_image.alt }}" />
+    {% elsif site.default_meta_image %}
+        <meta property="og:image" content="{{ site.url }}/img/{{ site.default_meta_image }}">
+        <meta property="og:image:alt" content="{{ site.default_meta_image_alt }}" />
+    {% endif %}
+    
     <meta name="twitter:card" content="{{ site.twitter.card }}" />
     {% if site.twitter.username %}<meta name="twitter:site" content="@{{ site.twitter.username }}" />{% endif %}
-    {% if page.author.twitter %}<meta name="twitter:creator" content="@{{ page.author.twitter }}" />{% endif %}
+    {% if page.author %}
+        {% assign author = site.people | where: 'code_name', page.author | first %}
+        {% if author.twitter %}
+            <meta name="twitter:creator" content="@{{ author.twitter }}" />
+        {% endif %}
+    {% endif %}
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-    {% if page.description or site.description  %}<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />{% endif %}
-    {% if page.meta_image %}<meta name="twitter:image" content="{{ site.url }}{{ page.meta_image }}">
-    {% if page.meta_image_alt %}<meta name="twitter:image:alt" content="{{ page.meta_image_alt }}" />{% endif %}
-    {% elsif site.default_meta_image %}<meta name="twitter:image" content="{{ site.url }}{{ site.default_meta_image }}">
-    {% if site.default_meta_image_alt %}<meta name="twitter:image:alt" content="{{ site.default_meta_image_alt }}" />{% endif %}{% endif %}
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    {% if page.image %}
+        {% assign featured_image = site.images | where: 'title', page.image | first %}
+        <meta name="twitter:image" content="{{ site.url }}/img/{{ featured_image.title }}">
+        <meta name="twitter:image:alt" content="{{ featured_image.alt }}" />
+    {% elsif site.default_meta_image %}
+        <meta name="twitter:image" content="{{ site.url }}/img/{{ site.default_meta_image }}">
+        <meta name="twitter:image:alt" content="{{ site.default_meta_image_alt }}" />
+    {% endif %}
 
     <script type="application/ld+json">
     {
-      "@context": "http://schema.org/",
-      "@type": "{% if page.layout == 'post' %}BlogPosting{% else %}WebPage{% endif %}",
-      "headline": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
-      "name": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
-      "url": "{{ site.url }}{{ page.url }}",
-      "mainEntityOfPage": "{{ site.url }}{{ page.url }}",
-      {% if page.date %}"datePublished": "{{ page.date | date: "%Y-%m-%dT%H:%M:%S%z" }}",{% endif %}
-      {% if page.date_modified %}"dateModified": "{{ page.date_modified | date: "%Y-%m-%dT%H:%M:%S%z" }}",{% endif %}
-      "description": "{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}",
-      {% if page.meta_image %}"image": {
-        "@type": "ImageObject",
-        "url": "{{ site.url }}{{ page.meta_image }}"
-      },
-      {% elsif site.default_meta_image %}"image": {
-        "@type": "ImageObject",
-        "url": "{{ site.url }}{{ site.default_meta_image }}"
-      },{% endif %}
+    "@context": "http://schema.org/",
+    "@type": "{% if page.layout == 'post' %}BlogPosting{% else %}WebPage{% endif %}",
+    "headline": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
+    "name": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
+    "url": "{{ site.url }}{{ page.url }}",
+    "mainEntityOfPage": "{{ site.url }}{{ page.url }}",
+    {% if page.date %}"datePublished": "{{ page.date | date: "%Y-%m-%dT%H:%M:%S%z" }}",{% endif %}
+    {% if page.date_modified %}"dateModified": "{{ page.date_modified | date: "%Y-%m-%dT%H:%M:%S%z" }}",{% endif %}
+    "description": "{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}",
+    {% if page.image %}
+        {% assign featured_image = site.images | where: 'title', page.image | first %}
+        "image": {
+            "@type": "ImageObject",
+            "url": "{{ site.url }}/img/{{ featured_image.title }}"
+        },
+    {% elsif site.default_meta_image %}
+        "image": {
+            "@type": "ImageObject",
+            "url": "{{ site.url }}/img/{{ site.default_meta_image }}"
+        },
+    {% endif %}
+
       "publisher": {
           "@type": "Person",
           "name": "{{ site.author }}"

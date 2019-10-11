@@ -16,7 +16,14 @@ title: Blog
     </p>
     {% endif %}
 
+    <!-- Date -->
     <p><i class="far fa-calendar-alt"></i> {{ post.date | date_to_rfc822 }}</p>
+
+    <!-- Featured Image -->
+    {% if post.image %}
+        {% assign featured_image = site.images | where: 'title', post.image | first %}
+        <img src="{{ site.baseurl }}/img/{{ featured_image.title }}" class="img-fluid" alt="{{ featured_image.alt }}" title="{{ featured_image.caption }}">
+    {% endif %}
 
     <!-- List the post description -->
     <!-- <p>{{ post.description | markdownify }}</p> -->

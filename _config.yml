@@ -16,11 +16,11 @@
 title: Graph Paper # Required.
 url: "https://graphpaper.cncoulter.com" # Required. The base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-description: >-
-    Graph Paper is a Jekyll template that incorporates Bootstrap. It's an easy and quick way to have a Jekyll website/blog with the Bootstrap grid already set up. Like graph paper, this provides you with a flexible grid for you to build off of.
+description:
+- Graph Paper is a Jekyll template that incorporates Bootstrap. It's an easy and quick way to have a Jekyll website/blog with the Bootstrap grid already set up. Like graph paper, this provides you with a flexible grid for you to build off of. # Required.
 locale: en_US # Required.
 timezone: America/Los_Angeles
-author: Cameron N. Coulter # Required.
+author: Cam N. Coulter # Required.
 email: cam@cncoulter.com
 copyright: "Some rights reserved." # Required.
 
@@ -28,8 +28,8 @@ twitter: # Used for Twitter Cards
   username: camncoulter # Not required. Twitter username for the website/publication
   card: summary # Required. "summary" or "summary_large_image"
 
-default_meta_image: /img/notepad-593363_1920.jpg # Not required. This is the default image used for Twitter Cards
-default_meta_image_alt: "graph paper and a pen" # Not required.
+default_meta_image: notepad-593363_1920.jpg # Not required. This is the default image used for Twitter Cards. Image must be placed in /img/
+default_meta_image_alt: "graph paper and a pen" # Required IF you have a default_meta_image
 
 # Google Analytics
 # google_analytics: UA-XXXXXXXX-X

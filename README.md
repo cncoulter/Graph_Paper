@@ -24,8 +24,8 @@ As you can see, it's not quite ready yet.
 * ~~Add comments~~
 * ~~Add author photos~~
 * ~~Add featured images~~
-
-* Allow featured images to work without metadata note
+* ~~Allow featured images to work without metadata note~~
+* Add share on Twitter/facebook/social media buttons
 
 * Design updates/beautify
 * Add about this site

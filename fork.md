@@ -15,3 +15,7 @@ This website uses [Font Awesome](https://fontawesome.com/) for icons and social 
 ### Favicon
 
 TK
+
+### Images
+
+For each image, you are required to have a -.html file in the images collection listing the title and alt.
