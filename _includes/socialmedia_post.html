@@ -32,6 +32,14 @@
         </li>
     {% endif %}
 
+    {% if author.tumblr %}
+        <li class="list-inline-item">
+            <a href="https://twitter.com/{{ author.tumblr }}" data-toggle="tooltip" data-placement="bottom" title="Tumblr">
+                <i class="fab fa-tumblr-square"></i>
+            </a>
+        </li>
+    {% endif %}
+
     {% if author.patreon %}
         <li class="list-inline-item">
             <a href="https://www.patreon.com/{{ author.patreon }}" data-toggle="tooltip" data-placement="bottom" title="Patreon">
