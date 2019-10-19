@@ -8,7 +8,7 @@ title: People
     {% for person in site.people %}
         {% if person.photo %}
             <li class="media">
-                <a href="{{ person.url }}" title="View Profile"><img src="{{ person.photo }}" class="mr-3 rounded" width="75" alt="Author photo"></a>
+                <a href="{{ person.url }}" title="View Profile"><img src="{{ site.url }}/img/{{ person.photo }}" class="mr-3 rounded" width="75" alt="Author photo"></a>
                 <div class="media-body">
                   <a href="{{ person.url }}"><h5 class="mt-0 mb-1">{{ person.title }}</h5></a>
                   {{ person.content }}

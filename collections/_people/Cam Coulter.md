@@ -2,7 +2,7 @@
 layout: people
 title: Cam N. Coulter
 code_name: cam
-photo: /img/cam.jpg
+photo: cam.jpg
 position: Designer
 website: https://www.cncoulter.com/
 email: cam@cncoulter.com

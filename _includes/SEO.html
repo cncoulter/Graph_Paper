@@ -26,7 +26,7 @@
         <meta property="og:image" content="{{ site.url }}/img/{{ site.default_meta_image }}">
         <meta property="og:image:alt" content="{{ site.default_meta_image_alt }}" />
     {% endif %}
-    
+
     <meta name="twitter:card" content="{{ site.twitter.card }}" />
     {% if site.twitter.username %}<meta name="twitter:site" content="@{{ site.twitter.username }}" />{% endif %}
     {% if page.author %}
@@ -34,13 +34,20 @@
         {% if author.twitter %}
             <meta name="twitter:creator" content="@{{ author.twitter }}" />
         {% endif %}
+    {% elsif page.layout == 'people' %}
+        {% if page.twitter %}
+            <meta name="twitter:creator" content="@{{ page.twitter }}" />
+        {% endif %}
     {% endif %}
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.layout == 'people' %}View all posts by {{ page.title}}{% else %}{{ site.description }}{% endif %}" />
     {% if page.image %}
         {% assign featured_image = site.images | where: 'title', page.image | first %}
         <meta name="twitter:image" content="{{ site.url }}/img/{{ featured_image.title }}">
         <meta name="twitter:image:alt" content="{{ featured_image.alt }}" />
+    {% elsif page.layout == 'people' and page.photo %}
+        <meta name="twitter:image" content="{{ site.url }}/img/{{ page.photo }}">
+        <meta name="twitter:image:alt" content="Photo of {{ page.title }}" />
     {% elsif site.default_meta_image %}
         <meta name="twitter:image" content="{{ site.url }}/img/{{ site.default_meta_image }}">
         <meta name="twitter:image:alt" content="{{ site.default_meta_image_alt }}" />
