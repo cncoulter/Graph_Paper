@@ -26,13 +26,13 @@ As you can see, it's not quite ready yet.
 * ~~Add featured images~~
 * ~~Allow featured images to work without metadata note~~
 * ~~Card support for authors~~
-* Add share on Twitter/facebook/social media buttons
+* ~~Add share on Twitter/facebook/social media buttons~~
+* Fix author links?
+* Category index/archive pages
 
 * Design updates/beautify
 * Add about this site
-* Add contribute page
+* Update contribute page
 * Update fork page
 * Update homepage
 * Add portfolio pages
-
-* Add syntax highlighting
