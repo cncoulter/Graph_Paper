@@ -20,7 +20,7 @@ layout: null
         <name>{{ author.title }}</name>
     </author>
     <updated>{{ site.time | date_to_xmlschema }}</updated>
-    <icon>{{ site.url }}/img/favicon.ico</icon>
+    <icon>{{ site.url }}/img/{{ site.favicon }}</icon>
     <rights>Copyright © {{ site.time | date: "%Y" }} {{ site.author }}. {{ site.copyright }}</rights>
 
     {% for post in filtered_posts %}

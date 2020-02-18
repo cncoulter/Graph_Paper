@@ -27,12 +27,11 @@ As you can see, it's not quite ready yet.
 * ~~Allow featured images to work without metadata note~~
 * ~~Card support for authors~~
 * ~~Add share on Twitter/facebook/social media buttons~~
+* ~~Syntax highlighting~~
 * Fix author links?
-* Category index/archive pages
-
+* Category index/archive pages (?)
+* Documentation: Fork, Contribute, About this Site, code/in-line documentation & comments
 * Design updates/beautify
-* Add about this site
-* Update contribute page
-* Update fork page
-* Update homepage
 * Add portfolio pages
+* Add blog posts
+* Google Analytics

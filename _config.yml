@@ -1,4 +1,4 @@
-# Welcome to Jekyll!
+# Welcome to Jekyll (And Graph Paper)!
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely edit after that. If you find
@@ -13,6 +13,9 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+
+# Graph Paper note: if any field is marked as required, make sure you put in some value for it. If it's marked as required, that's because another page (such as SEO.html) assumes it's there, so if you leave the field blank, then your SEO settings (for example) will get messed up.
+
 title: Graph Paper # Required.
 url: "https://graphpaper.cncoulter.com" # Required. The base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -23,10 +26,11 @@ timezone: America/Los_Angeles
 author: Cam N. Coulter # Required.
 email: cam@cncoulter.com
 copyright: "Some rights reserved." # Required.
+favicon: favicon.ico # Required. When forking, you will want to change this file to the favicon you will use for your site. If your favicon is placed in a subfolder (for example, `/img/config/`), then make sure to include the subfolder (for example, `favicon: config/favicon.ico`)
 
 twitter: # Used for Twitter Cards
-  username: camncoulter # Not required. Twitter username for the website/publication
-  card: summary # Required. "summary" or "summary_large_image"
+    card: summary # Required. "summary" or "summary_large_image"
+    username: camncoulter # Not required. Twitter username for the website/publication
 
 default_meta_image: notepad-593363_1920.jpg # Not required. This is the default image used for Twitter Cards. Image must be placed in /img/
 default_meta_image_alt: "graph paper and a pen" # Required IF you have a default_meta_image
@@ -47,6 +51,10 @@ collections:
 paginate: 3
 paginate_path: "/blog/page:num/"
 
+# Font Awesome
+# Make your own account with Font Awesome and then replace the link below with your own kit’s code.
+my_FA_kit: https://kit.fontawesome.com/b41e0c7e90.js # Required.
+
 # Disqus Comments
 disqus:
     # Leave shortname blank to disable comments site-wide.
@@ -64,6 +72,7 @@ defaults:
 # Build settings
 permalink: /:year/:month/:day/:title/
 markdown: kramdown
+highlighter: rouge
 sass:
   sass_dir: css
 plugins:

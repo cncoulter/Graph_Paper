@@ -12,13 +12,14 @@ title: About
 * Graph Paper supports tags and categories beautifully.
 * Graph Paper supports multiple authors. Each author has their own page which lists their bio, their picture, their posts, and their social media links.
 * Graph Paper features RSS support, both for the site as a whole and for individual authors. Like with SEO, Graph Paper's RSS feeds are hand-coded, which means they are robust and detailed out-of-the-box and easily allow you to modify them to suit your own needs.
-* Blog pagination
-* Multiple options for your blog archive pages: view the full post, an excerpt, or just a description
-* Support for comments via [Disqus](https://disqus.com/)
-* Featured images
-* Support for Twitter cards, so that links to your website look beautiful when shared on social media
-* Social media share buttons for Twitter, Facebook, Tumblr, and LinkedIn
-* A beautiful, simple, and modifiable design which includes template pages for blog posts and portfolios
+* Graph Paper supports blog pagination, and easily allows you to customize how many posts are displayed on each page.
+* Graph Paper supports multiple options for your blog archive pages: you can view the full post, an excerpt, or just a description.
+* Graph Paper includes support for comments via [Disqus](https://disqus.com/)
+* Graph Paper includes support for Twitter cards, so that links to your website look beautiful when shared on social media
+* Graph Paper features social media share buttons for Twitter, Facebook, Tumblr, and LinkedIn
+* Graph Paper includes support for featured images with each post and page. Featured images show up on archive pages as well as when shared on social media.
+* Graph Paper boasts a beautiful, simple, and modifiable design which includes template pages for blog posts and portfolios.
+* Graph Paper supports syntax highlighting.
 
 ## Missing Features
 
