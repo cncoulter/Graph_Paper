@@ -4,14 +4,13 @@ layout: default
 <!-- Page Content-->
 <article>
     <div class="container">
-
         <div class="row justify-content-center">
 
-            <!-- Post Content Column -->
+            <!-- Column: Post Content -->
             <div class="col-lg-8">
 
                 <!-- Title -->
-                <h2 class="mt-4">{{ page.title }}</h2>
+                <h1 class="mt-4">{{ page.title }}</h1>
 
                 <!-- Author -->
                 {% if page.author %}
@@ -21,38 +20,38 @@ layout: default
                 </p>
                 {% endif %}
 
-                <!-- Date/Time -->
-                <p class="text-muted"><i class="far fa-calendar-alt"></i> Posted on {{ page.date | date: "%B %e, %Y" }}</p>
+                <!-- Date/Time & Categories -->
+                <p class="text-muted">
+                    <i class="far fa-calendar-alt"></i> Posted on {{ page.date | date: "%b. %e, %Y at %l:%M %p %Z" }}
+                    {% if page.categories != empty %}
+                        {% for category in page.categories %}
+                            <a href="{{ site.baseurl }}/blog/categories#{{ category }}" class="badge badge-tag mx-1"><i class="fas fa-folder-open"></i> {{ category }}</a>
+                        {% endfor %}
+                    {% endif %}
+                    {% if page.date_modified != null %}
+                        <br />
+                        <i class="far fa-calendar-check"></i> Modified on {{ page.date_modified | date: "%b. %e, %Y at %l:%M %p %Z" }}
+                    {% endif %}
+                </p>
 
                 <!-- Featured Image -->
-                {% if page.image %}
-                    {% assign featured_image = site.images | where: 'title', page.image | first %}
-                    <figure class="figure">
-                        <img src="{{ site.baseurl }}/img/{{ featured_image.title }}" class="figure-img img-fluid" alt="{{ featured_image.alt }}" title="{{ featured_image.caption }}">
-                        <figcaption class="figure-caption text-muted font-weight-light small">{{ featured_image.content }}</figcaption>
-                    </figure>
-                {% endif %}
-
-                <!-- Post: Categories -->
-                {% if page.categories != empty %}
-                    <p>Categories:
-                    {% for category in page.categories %}
-                        <a href="{{ site.baseurl }}/blog/categories#{{ category }}" class="badge badge-tag mx-1"><i class="fas fa-folder-open"></i> {{ category }}</a>
-                    {% endfor %}
-                    </p>
-                {% endif %}
-
-                <!-- Post Footer: Tags -->
-                {% if page.tags != empty %}
-                    <p>Tags:
-                    {% for tag in page.tags %}
-                        <a href="{{ site.baseurl }}/blog/tags#{{ tag }}" class="badge badge-tag mx-1"><i class="fas fa-tag"></i> {{ tag }}</a>
-                    {% endfor %}
-                    </p>
-                {% endif %}
+                {% assign image = site.images | where: 'title', page.image | first %}
+                <figure class="figure">
+                    <img src="{{ site.baseurl }}/img/{{ image.title }}" class="figure-img img-fluid" alt="{{ image.alt }}" title="{{ image.caption }}">
+                    <figcaption class="figure-caption">{{ image.content }}</figcaption>
+                </figure>
 
                 <!-- Post Content -->
                 <div>{{ content }}</div>
+
+                <!-- Post Footer: Tags -->
+                {% if page.tags != empty %}
+                <p class="text-center">
+                    {% for tag in page.tags %}
+                    <a href="{{ site.baseurl }}/blog/tags#{{ tag }}" class="badge badge-tag mx-1"><i class="fas fa-tag"></i> {{ tag }}</a>
+                    {% endfor %}
+                </p>
+                {% endif %}
 
                 <!-- Share via Social Media Links -->
                 {%- include share.html -%}
@@ -61,30 +60,30 @@ layout: default
                 <div class="card bg-light">
                     <div class="card-body">
 
-                    {% if author.photo %}
+                        {% if author.photo %}
                         <div class="media">
-                          <a href="{{ author.url }}" title="View Profile"><img src="{{ site.url }}/img/{{ author.photo }}" alt="Author photo" class="align-self-start mr-3 rounded" width="75"></a>
-                          <div class="media-body">
-                            <h5 class="mt-0">About <a href="{{ author.url }}">{{ author.title }}</a></h5>
-                            {{ author | markdownify }}
-                          </div>
+                            <a href="{{ author.url }}" title="View Profile"><img src="{{ site.url }}/img/{{ author.photo }}" alt="Author photo" class="align-self-start mr-3 rounded" width="75"></a>
+                            <div class="media-body">
+                                <h5 class="mt-0">About <a href="{{ author.url }}">{{ author.title }}</a></h5>
+                                {{ author | markdownify }}
+                            </div>
                         </div>
-                    {% else %}
+                        {% else %}
                         <h4 class="card-title">About <a href="{{ author.url }}">{{ author.title }}</a></h4>
                         <p class="card-text">{{ author | markdownify }}</p>
-                    {% endif %}
+                        {% endif %}
 
-                    <span class="text-center">{%- include socialmedia_post.html -%}</span>
+                        <span class="text-center">{%- include socialmedia_post.html -%}</span>
 
                     </div>
                 </div>
 
                 <!-- Comments -->
                 {% if site.disqus.shortname %}
-                    {% include disqus_comments.html %}
+                {% include disqus_comments.html %}
                 {% endif %}
 
+            </div>
         </div>
-
     </div>
 </article>

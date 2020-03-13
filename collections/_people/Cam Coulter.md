@@ -3,14 +3,10 @@ layout: people
 title: Cam N. Coulter
 code_name: cam
 photo: cam.jpg
-position: Designer
 website: https://www.cncoulter.com/
-email: cam@cncoulter.com
 twitter: camncoulter
 linkedin: cameronncoulter
 github: cncoulter
-patreon: skiffyandfanty
-facebook: tk
 feed: yes
 ---
 

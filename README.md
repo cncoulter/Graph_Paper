@@ -31,7 +31,9 @@ As you can see, it's not quite ready yet.
 * Fix author links?
 * Category index/archive pages (?)
 * Documentation: Fork, Contribute, About this Site, code/in-line documentation & comments
-* Design updates/beautify
+* Design updates/beautify: blog (with blog sidebar), add archive page, move blog sidebar from post to blog main page, beautiful alternative options for blog archive list
+* What YAML frontmatter is required for posts?
 * Add portfolio pages
 * Add blog posts
+* Allow folks to donate me to via PayPal and kofi?
 * Google Analytics

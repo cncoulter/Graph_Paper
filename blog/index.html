@@ -1,83 +1,149 @@
 ---
-layout: page
+layout: default
 title: Blog
 ---
 
-<!-- Loop through the paginated posts -->
-{% for post in paginator.posts %}
+<!-- Page Content-->
+<article>
+    <div class="container">
+        <div class="row justify-content-center">
 
-    <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+            <!-- Column 1: Post Content -->
+            <div class="col-lg-8">
 
-    <!-- Author -->
-    {% if post.author %}
-    <p class="lead">
-        {% assign author = site.people | where: 'code_name', post.author | first %}
-        by <a href="{{ author.url }}">{{ author.title }}</a>
-    </p>
-    {% endif %}
+                <!-- Page Title -->
+                <h1 class="display-4 mt-4">Blog</h1>
 
-    <!-- Date -->
-    <p><i class="far fa-calendar-alt"></i> {{ post.date | date_to_rfc822 }}</p>
+                <!-- Display recent blog posts -->
+                {% for post in paginator.posts %}
 
-    <!-- Featured Image -->
-    {% if post.image %}
-        {% assign featured_image = site.images | where: 'title', post.image | first %}
-        <img src="{{ site.baseurl }}/img/{{ featured_image.title }}" class="img-fluid" alt="{{ featured_image.alt }}" title="{{ featured_image.caption }}">
-    {% endif %}
+                    <!-- Featured Image -->
+                    {% if post.image %}
+                        {% assign featured_image = site.images | where: 'title', post.image | first %}
+                        <img src="{{ site.baseurl }}/img/{{ featured_image.title }}" class="img-fluid" alt="{{ featured_image.alt }}" title="{{ featured_image.caption }}">
+                    {% endif %}
 
-    <!-- List the post description -->
-    <!-- <p>{{ post.description | markdownify }}</p> -->
+					<!-- Post Title -->
+                    <h1 class="mt-2"><a href="{{ post.url }}">{{ post.title }}</a></h1>
 
-    <!-- Alternatively, you can use an except, which by default is the first paragraph of the post -->
-    <p>{{ post.excerpt }}</p>
-    <p><a href="{{ post.url }}">[Read more…]</a></p>
+                    <!-- Author, Date, & Categories -->
+                    {% if post.author %}
+                    <p class="font-weight-normal">
+                        {% assign author = site.people | where: 'code_name', post.author | first %}
+                        <i class="fas fa-user"></i>
+                        <a href="{{ author.url }}">{{ author.title }}</a>
+                        <span class="font-weight-light">|</span>
+                        <i class="far fa-calendar-alt"></i>
+                        {{ post.date | date: "%b. %e, %Y" }}
+                        {% if post.categories != empty %}
+                            <span class="font-weight-light text-muted">|</span>
+                            {% for category in post.categories %}
+                                <a href="{{ site.baseurl }}/blog/categories#{{ category }}" class="badge badge-tag mx-1">
+                                    <i class="fas fa-folder-open"></i>
+                                    {{ post.categories }}
+                                </a> <!-- TK may have screwed this up -->
+                            {% endfor %}
+                        {% endif %}
+                    </p>
+                    {% endif %}
 
-    <!-- Alternatively, you can display the entire blog post -->
-    <!-- {{ post.content }} -->
+                    <!-- List the post description -->
+                    <!-- <p>{{ post.description | markdownify }}</p> -->
 
-{% endfor %}
+                    <!-- Alternatively, you can use an except, which by default is the first paragraph of the post -->
+                    <p>{{ post.excerpt }}</p>
+                    <p><a href="{{ post.url }}">[Read more…]</a></p>
 
-<!-- Pagination links -->
-{% if paginator.total_pages > 1 %}
-    <nav aria-label="Blog pagination">
-        <ul class="pagination justify-content-center">
+                    <!-- Alternatively, you can display the entire blog post -->
+                    <!-- {{ post.content }} -->
 
-            {% if paginator.previous_page %}
-                <li class="page-item">
-                    <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}">Previous</a>
-                </li>
-            {% else %}
-                <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                </li>
-            {% endif %}
+                    {% if forloop.last == false %}
+                        <hr>
+                    {% endif %}
 
-            {% for page in (1..paginator.total_pages) %}
-                {% if page == paginator.page %}
-                    <li class="page-item active" aria-current="page">
-                        <a class="page-link" href="#">{{ page }}<span class="sr-only">(current)</span></a>
-                    </li>
-                {% elsif page == 1 %}
-                    <li class="page-item">
-                        <a class="page-link" href="{{ site.url }}/blog/">{{ page }}</a>
-                    </li>
-                {% else %}
-                    <li class="page-item">
-                        <a class="page-link" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
-                    </li>
+                {% endfor %}
+
+
+
+
+                <!-- Pagination -->
+                {% if paginator.total_pages > 1 %}
+                <nav aria-label="Blog pagination">
+                    <ul class="pagination justify-content-center">
+
+                        {% if paginator.previous_page %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ paginator.previous_page_path | relative_url }}">Previous</a>
+                        </li>
+                        {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        {% endif %}
+
+                        {% for page in (1..paginator.total_pages) %}
+                        {% if page == paginator.page %}
+                        <li class="page-item active" aria-current="page">
+                            <a class="page-link" href="#">{{ page }}<span class="sr-only">(current)</span></a>
+                        </li>
+                        {% elsif page == 1 %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ site.url }}/blog/">{{ page }}</a>
+                        </li>
+                        {% else %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+
+                        {% if paginator.next_page %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ paginator.next_page_path | relative_url }}">Next</a>
+                        </li>
+                        {% else %}
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Next</a>
+                        </li>
+                        {% endif %}
+
+                    </ul>
+                </nav>
                 {% endif %}
-            {% endfor %}
 
-            {% if paginator.next_page %}
-                <li class="page-item">
-                    <a class="page-link" href="{{ paginator.next_page_path | relative_url }}">Next</a>
-                </li>
-            {% else %}
-                <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Next</a>
-                </li>
-            {% endif %}
+            </div>
 
-        </ul>
-    </nav>
-{% endif %}
+            <!-- Column 2: Sidebar -->
+            <div class="col-lg-4">
+
+                <!-- Side Widget: Archive, RSS Feed, Categories, & Tags NEEDS CODE CLEANING TK -->
+                <div class="card mt-4">
+                    <h5 class="card-header">Read More</h5>
+                    <div class="card-body">
+                        <div class="row justify-content-center">
+                            <a href="/blog/archive" class="card-link btn btn-outline-primary m-1"><i class="fas fa-archive"></i> Archive</a>
+                            <a href="/feed.xml" class="card-link btn btn-outline-primary m-1"><i class="fas fa-rss"></i> RSS Feed</a>
+                            <a href="/blog/archive" class="card-link btn btn-outline-primary m-1"><i class="fas fa-folder-open"></i> Categories</a>
+                            <a href="/feed.xml" class="card-link btn btn-outline-primary m-1"><i class="fas fa-tag"></i> Tags</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side Widget: Recent Posts -->
+                <div class="card mt-4">
+                    <h5 class="card-header">Recent Posts</h5>
+                    <div class="list-group list-group-flush">
+                        {% for post in site.posts limit:5 %}
+                        <a href="{{ site.baseurl }}{{ post.url }}" class="list-group-item list-group-item-action">
+                            {{ post.title }}
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</article>

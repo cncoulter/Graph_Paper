@@ -4,7 +4,7 @@ permalink: /fork/
 title: Forking
 ---
 
-### `_config.yml`
+# `_config.yml`
 
 Your `_config.yml` file is where Jekyll stores the settings that affect your whole blog, so if you're forking Graph Paper to make your own website, you'll probably want to start here.
 
@@ -16,9 +16,9 @@ title: Graph Paper # Required.
 
 If any field is marked as required, make sure you put in some value for it. If it's marked as required, that's because another page (such as `SEO.html`) assumes it's there, so if you leave the field blank, then your SEO settings (for example) will get messed up.
 
-### Images
+# Images
 
-#### Image Metadata
+## Image Metadata
 
 Store all your images in `/img/`.
 
@@ -63,16 +63,20 @@ Of course, you'll want to update the path to lead to where your image is stored.
 
 If you want to use an image on a page or in a post without labeling it as the featured image, simply copy and paste the below code. Make sure you replace `image-title.jpg` with your image's title.
 
-{% highlight html %}
-{% raw  %}{% assign image_title = "image-title.jpg" %}
-{% assign image = site.images | where: 'title', image_title | first %}{% endraw %}
+{% highlight html %}{% raw  %}
+{% assign image_title = "image-title.jpg" %}
+{% assign image = site.images | where: 'title', image_title | first %}
 <figure class="figure">
     <img src="{{ site.baseurl }}/img/{{ image.title }}" class="figure-img img-fluid" alt="{{ image.alt }}" title="{{ image.caption }}">
-    <figcaption class="figure-caption text-muted font-weight-light small">{{ image.content }}</figcaption>
+    <figcaption class="figure-caption">{{ image.content }}</figcaption>
 </figure>
-{% endhighlight %}
+{% endraw %}{% endhighlight %}
 
-### Multiple Authors
+# Multiple Authors
 
 * general support
 * RSS feeds
+
+# Blog posts
+
+* start on H2

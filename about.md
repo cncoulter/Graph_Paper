@@ -4,7 +4,9 @@ permalink: /about/
 title: About
 ---
 
-## Features
+<p class="lead">It's easier to remove code than to write it, so Graph Paper aims to implement every feature you can reasonably expect Jekyll to support. That way, you can quickly delete what you don't need, customize what you want, and get up and running.</p>
+
+# Features
 
 * Graph Paper uses [Font Awesome](https://fontawesome.com/) to incorporate beautiful icons: <i class="fas fa-tag"></i> <i class="fas fa-folder-open"></i> <i class="far fa-calendar-alt"> <i class="fab fa-twitter"></i>
 * Graph Paper features robust, hand-coded SEO support. Graph Paper doesn't use the Jekyll SEO plugin, which gives you more flexibility to change the default settings to fit the needs of your website.
@@ -20,10 +22,12 @@ title: About
 * Graph Paper includes support for featured images with each post and page. Featured images show up on archive pages as well as when shared on social media.
 * Graph Paper boasts a beautiful, simple, and modifiable design which includes template pages for blog posts and portfolios.
 * Graph Paper supports syntax highlighting.
+* Blog: post dates and modified dates
 
-## Missing Features
+# Missing Features
 
 There are a couple features that I haven't added support for yet. Feel free to contribute these if you wish!
 
 * A search widget
-* Syntax highlighting
+* Add line numbers to code blocks
+* Make the site as accessible as possible

@@ -1,60 +1,63 @@
 ---
 layout: default
 ---
+
 <!-- Page Content-->
 <article>
     <div class="container">
 
+        <!-- Row 1: Name, Bio, Links, Photo -->
         <div class="row justify-content-center">
-
-            <!-- Post Content Column -->
             <div class="col-lg-8">
+                <div class="row">
 
-                <!-- Photo, Name, & Position-->
-                {% if page.photo %}
-                    <div class="media mt-4">
-                      <img src="{{ site.url }}/img/{{ page.photo }}" alt="Author photo" class="align-self-start mr-3 rounded" width="75">
-                      <div class="media-body">
-                        <h2 class="mt-0">{{ page.title }}</h2>
-                        <p>Position: <strong>{{ page.position }}</strong></p>
-                      </div>
+                    <!-- Row 1, Col 1: Name, Bio, Links -->
+                    <div class="col-md-8">
+                        <!-- Name -->
+                        <h1 class="display-4 mt-4">{{ page.title | escape }}</h1>
+                        <!-- Bio -->
+                        <div class="mt-2">{{ content }}</div>
+                        <!-- Links -->
+                        <span class="text-center">{%- include socialmedia_page.html -%}</span>
                     </div>
-                {% else %}
-                    <h2 class="mt-4">{{ page.title }}</h2>
-                    <p>Position: <strong>{{ page.position }}</strong></p>
-                {% endif %}
 
-                <!-- Bio -->
-                <div class="mt-2">{{ content }}</div>
+                    <!-- Row 1, Col 2: Photo -->
+                    <div class="col-md-4">
+                        {% assign image = site.images | where: 'title', page.photo | first %}
+                        <figure class="figure mt-4">
+                            <img src="{{ site.baseurl }}/img/{{ image.title }}" class="figure-img img-fluid" alt="{{ image.alt }}" title="{{ image.caption }}">
+                            <figcaption class="figure-caption">{{ image.content }}</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                <!-- Web/Social Media Links/Profiles -->
-                <span class="text-center">{%- include socialmedia_page.html -%}</span>
-
-                <!-- List all blog posts by person -->
+        <!-- Row 2: List all blog posts by person -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
                 {% assign filtered_posts = site.posts | where: 'author', page.code_name %}
                 {% if filtered_posts.size != 0 %}
                 <div class="card my-3">
                     <div class="card-body">
                         <h4 class="card-title">Posts by {{ page.title }}</h4>
                         <ul class="card-text">
-                        {% for post in filtered_posts %}
-                              <li><span class="font-weight-light text-muted">{{ post.date | date: "%e %B %Y" }}:</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
-                        {% endfor %}
+                            {% for post in filtered_posts %}
+                            <li><span class="font-weight-light text-muted">{{ post.date | date: "%e %B %Y" }}:</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
+                            {% endfor %}
                         </ul>
                     </div>
                     <div class="card-footer">
                         {% capture number_of_posts %}{{ filtered_posts.size }}{% endcapture %}
                         {% if number_of_posts == "1" %}
-                            {{ number_of_posts }} post
+                        {{ number_of_posts }} post
                         {% else %}
-                            {{ number_of_posts }} posts
+                        {{ number_of_posts }} posts
                         {% endif %}
                     </div>
                 </div>
                 {% endif %}
-
             </div>
-
         </div>
 
     </div>
