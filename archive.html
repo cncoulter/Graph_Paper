@@ -1,0 +1,18 @@
+---
+layout: page
+permalink: /blog/archive
+title: Archive
+---
+
+<div class="table-responsive">
+    <table class="table table-sm table-hover">
+        <tbody>
+            {% for post in site.posts %}
+            <tr>
+                <th scope="row" class="thead-light" style="text-align: center;">{{ post.date | date: "%e %B %Y" }}</th>
+                <td><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
