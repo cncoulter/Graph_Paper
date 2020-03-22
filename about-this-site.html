@@ -1,0 +1,22 @@
+---
+layout: page
+permalink: /about-this-site/
+title: About This Site
+---
+
+{% assign image = site.images | where: 'title', "notepad-593363_1920.jpg" | first %}
+
+<figure class="figure">
+    <img src="{{ site.baseurl }}/img/{{ image.title }}" class="figure-img img-fluid" alt="{{ image.alt }}" title="{{ image.caption }}">
+    <figcaption class="figure-caption">{{ image.content }}</figcaption>
+</figure>
+
+<p><a href="https://github.com/cncoulter/Graph-Paper">Graph Paper</a> is:</p>
+
+<ul>
+    <li>Powered by <a href="https://jekyllrb.com/">Jekyll</a></li>
+    <li>Designed by Cam N. Coulter using <a href="https://getbootstrap.com/">Bootstrap</a></li>
+    <li>Hosted on <a href="https://github.com/">GitHub</a> thanks to <a href="https://pages.github.com/">GitHub Pages</a></li>
+</ul>
+
+<p>TK INSERT copyright info.</p>

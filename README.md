@@ -28,8 +28,11 @@ As you can see, it's not quite ready yet.
 * ~~Card support for authors~~
 * ~~Add share on Twitter/facebook/social media buttons~~
 * ~~Syntax highlighting~~
-* Fix author links?
 * ~~Category index/archive pages~~
+* ~~Add about this page~~
+
+* Fix author links?
+
 * Documentation: Fork, Contribute, About this Site, code/in-line documentation & comments
 * ~~Design updates/beautify: blog (with blog sidebar), add archive page, move blog sidebar from post to blog main page, beautiful alternative options for blog archive list~~
 * What YAML frontmatter is required for posts?
