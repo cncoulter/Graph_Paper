@@ -30,7 +30,7 @@ As you can see, it's not quite ready yet.
 * ~~Syntax highlighting~~
 * ~~Category index/archive pages~~
 * ~~Add about this page~~
-
+* ~~copyright info syntax highlighting~~
 * Fix author links?
 
 * Documentation: Fork, Contribute, About this Site, code/in-line documentation & comments

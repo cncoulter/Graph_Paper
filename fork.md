@@ -4,6 +4,10 @@ permalink: /fork/
 title: Forking
 ---
 
+# Setup
+
+gem install jekyll-paginate jekyll-redirect-from jekyll-sitemap
+
 # `_config.yml`
 
 Your `_config.yml` file is where Jekyll stores the settings that affect your whole blog, so if you're forking Graph Paper to make your own website, you'll probably want to start here.
