@@ -36,6 +36,7 @@ As you can see, it's not quite ready yet.
 * Documentation: Fork, Contribute, About this Site, code/in-line documentation & comments
 * ~~Design updates/beautify: blog (with blog sidebar), add archive page, move blog sidebar from post to blog main page, beautiful alternative options for blog archive list~~
 * What YAML frontmatter is required for posts?
+* Reuse compliant
 * Add blog posts
 * Allow folks to donate me to via PayPal and kofi?
 * Google Analytics
