@@ -20,7 +20,7 @@ title: Graph Paper # Required.
 url: "https://graphpaper.cncoulter.com" # Required. The base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 description:
-- Graph Paper is a Jekyll template that incorporates Bootstrap. It's an easy and quick way to have a Jekyll website/blog with the Bootstrap grid already set up. Like graph paper, this provides you with a flexible grid for you to build off of. # Required.
+- Graph Paper is a Jekyll website integrated with Bootstrap and packed with features including support for multiple authors, featured images, tags, Twitter cards, and much more. If you want to design a website using Jekyll and Bootstrap, start by forking Graph Paper. # Required.
 locale: en_US # Required.
 timezone: America/Los_Angeles
 author: Cam N. Coulter # Required.
