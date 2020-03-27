@@ -20,7 +20,9 @@ title: Blog
                     <!-- Featured Image -->
                     {% if post.image %}
                         {% assign featured_image = site.images | where: 'title', post.image | first %}
-                        <img src="{{ site.baseurl }}/img/{{ featured_image.title }}" class="img-fluid" alt="{{ featured_image.alt }}" title="{{ featured_image.caption }}">
+                        <a href="{{ post.url }}">
+                            <img src="{{ site.baseurl }}/img/{{ featured_image.title }}" class="img-fluid" alt="{{ featured_image.alt }}" title="{{ featured_image.caption }}">
+                        </a>
                     {% endif %}
 
 					<!-- Post Title -->
@@ -38,9 +40,9 @@ title: Blog
                         {% if post.categories != empty %}
                             <span class="font-weight-light text-muted">|</span>
                             {% for category in post.categories %}
-                                <a href="{{ site.baseurl }}/blog/categories#{{ category }}" class="badge badge-tag mx-1">
+                                <a href="{{ site.baseurl }}/blog/categories#{{ category }}" class="badge badge-tag mr-1">
                                     <i class="fas fa-folder-open"></i>
-                                    {{ post.categories }}
+                                    {{ category }}
                                 </a> <!-- TK may have screwed this up -->
                             {% endfor %}
                         {% endif %}
