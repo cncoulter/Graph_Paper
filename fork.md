@@ -19,8 +19,13 @@ title: Fork
                     <li><a href="#multiple-authors">Multiple Authors</a></li>
                     <li><a href="#images">Images</a>
                         <ul>
-                            <li>Image Metadata</li>
-                            <li>Using Images</li>
+                            <li><a href="#image-metadata">Image Metadata</a></li>
+                            <li><a href="#using-images">Using Images</a>
+                                <ul>
+                                    <li><a href="#as-featured-images">As Featured Images</a></li>
+                                    <li><a href="#on-a-page">On a Page</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li>Blog Posts</li>
@@ -133,15 +138,27 @@ Now, your new author is all set up with their own [author page]({{ site.baseurl 
 
 # Images
 
-Like with authors, it takes a little work to set up images in Graph Paper.
+Like with authors, it takes a little work to set up images in Graph Paper. However, once you get it set up, it's easy to include featured images with blog posts that display on the post itself, on archive pages, and when shared on social media (through Twitter card support --- see `_includes/SEO.html`).
+
+Additionally, if you want to add an image anywhere else in the site, just use the following line of code to add the image as a [responsive image](https://getbootstrap.com/docs/4.4/content/images/#responsive-images) with a [caption](https://getbootstrap.com/docs/4.4/content/figures/).
+
+{% raw %}
+```
+{% include image.html file="glenn-carstens-peters-0iB6_GX7BXk-unsplash.jpg" %}
+```
+{% endraw %}
+
+(The above line of code produces the picture below.)
 
 {% include image.html file="glenn-carstens-peters-0iB6_GX7BXk-unsplash.jpg" %}
 
 ## Image Metadata
 
-Store all your images in `/img/`.
+You should store all of your images in `img/`.
 
-For each image, you are required to have an **HTML** file in the images collection (`/collections/_images/`). The HTML file should look like this:
+Graph Paper stores image metadata and captions within a [collection](https://jekyllrb.com/docs/collections/). For each image, you are required to have an HTML file in the images collection (`/collections/_images/`). This file stores the image's caption and metadata so that you personally don't need to copy that information every time you use the image. The caption in the above photo is pulled from `collections/_images/glenn-carstens-peters-0iB6_GX7BXk-unsplash.html`. As you can see in this example, give the image itself and its metadata file the same filename (just change the extension).
+
+The HTML file should look like this:
 
 {% highlight html %}
 ---
@@ -154,8 +171,6 @@ link: https://pixabay.com/photos/notepad-pen-write-plan-office-593363/
 Image by <a href="https://pixabay.com/users/StartupStockPhotos-690514/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=593363">StartupStockPhotos</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=593363">Pixabay</a>
 {% endhighlight %}
 
-This file stores the image's caption and metadata so that you personally don't need to copy that information every time you use the image.
-
 `title:` stores the picture's name. If the picture is placed in a subfolder (for example, `/img/puppies/`), then make sure to include the subfolder in the title (for example, `title: puppies/dachshund.jpg`).
 
 `alt:` stores the [alt attribute](https://www.w3schools.com/TAGS/att_img_alt.asp). This value should be a string, so make sure you use quotes.
@@ -164,7 +179,7 @@ This file stores the image's caption and metadata so that you personally don't n
 
 `link:` stores a link to where the image was found online. If the image doesn't have a URL where people can find it online, leave this blank.
 
-Finally, the main text in this file is the caption that will be displayed below the image. As you can see, you're welcome to use HTML here.
+Finally, the main text in this file is the caption that will be displayed below the image. As you can see, you can use HTML to add links or particular formatting to the caption.
 
 ## Using Images
 
@@ -178,18 +193,19 @@ image: glenn-carstens-peters-0iB6_GX7BXk-unsplash.jpg
 
 Of course, you'll want to update the path to lead to where your image is stored. If the picture is placed in a subfolder (for example, `/img/puppies/`), then make sure to include the subfolder (for example, `image: puppies/dachshund.jpg`)
 
+On the post (`layout: post`), the featured image will automatically display at the top of the page.
+
+On a page (`layout: page`), the featured image will not automatically display. However, if the page is shared on social media, the featured image will be shown (through Twitter card support --- again, see `_includes/SEO.html`).
+
 ### On a Page
 
-If you want to use an image on a page or in a post without labeling it as the featured image, simply copy and paste the below code. Make sure you replace `image-title.jpg` with your image's title.
+If you want to use an image on a page or in a post without labeling it as the featured image, simply use the include statement below.
 
-{% highlight html %}{% raw  %}
-{% assign image_title = "image-title.jpg" %}
-{% assign image = site.images | where: 'title', image_title | first %}
-<figure class="figure">
-    <img src="{{ site.baseurl }}/img/{{ image.title }}" class="figure-img img-fluid" alt="{{ image.alt }}" title="{{ image.caption }}">
-    <figcaption class="figure-caption">{{ image.content }}</figcaption>
-</figure>
-{% endraw %}{% endhighlight %}
+{% raw %}
+```
+{% include image.html file="glenn-carstens-peters-0iB6_GX7BXk-unsplash.jpg" %}
+```
+{% endraw %}
 
 ---
 
