@@ -38,5 +38,6 @@ As you can see, it's not quite ready yet.
 * What YAML frontmatter is required for posts?
 * Reuse compliant
 * Add blog posts
+* Invite people to share their forks
 * Allow folks to donate me to via PayPal and kofi?
 * Google Analytics

@@ -4,8 +4,8 @@ layout: null
 
 <?xml version="1.0" encoding="utf-8"?>
 
-{% assign author = site.people | where: 'code_name', "cam" | first %}
-{% comment %} In the above line, change "cam" to the author's code_name. {% endcomment %}
+{% assign author = site.people | where: 'code_name', "lorri" | first %}
+{% comment %} In the above line, change "lorri" to the author's code_name. {% endcomment %}
 
 {% assign filtered_posts = site.posts | where: 'author', author.code_name %}
 

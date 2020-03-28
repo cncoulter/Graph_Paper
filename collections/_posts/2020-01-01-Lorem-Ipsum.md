@@ -4,7 +4,7 @@ published: true
 title: "Lorem Ipsum"
 date: 2020-01-01 09:00
 date_modified: 2020-01-08 13:00
-author: cam # This should be a person's code_name from your people collection
+author: lorri # This should be a person's code_name from your people collection
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 categories:
 - Lorem Ipsum

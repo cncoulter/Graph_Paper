@@ -1,16 +1,59 @@
 ---
 layout: page
 permalink: /fork/
-title: Forking
+title: Fork
 ---
+
+<div class="row">
+    <div class="col-lg-6 mx-auto">
+        <div class="card">
+            <h5 class="card-header">Table of Contents</h5>
+            <div class="card-body">
+                <ol class="card-text">
+                    <li><a href="#setup">Setup</a></li>
+                    <ul>
+                        <li><a href="#jekyll">Jekyll</a></li>
+                        <li><a href="#git">Git</a></li>
+                        <li><a href="#configuration">Configuration</a></li>
+                    </ul>
+                    <li><a href="#multiple-authors">Multiple Authors</a></li>
+                    <li><a href="#images">Images</a>
+                        <ul>
+                            <li>Image Metadata</li>
+                            <li>Using Images</li>
+                        </ul>
+                    </li>
+                    <li>Blog Posts</li>
+                    <li><a href="#"></a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
 
 # Setup
 
-gem install jekyll-paginate jekyll-redirect-from jekyll-sitemap
+## Jekyll
 
-# `_config.yml`
+First, install [Jekyll](https://jekyllrb.com/docs/).
 
-Your `_config.yml` file is where Jekyll stores the settings that affect your whole blog, so if you're forking Graph Paper to make your own website, you'll probably want to start here.
+Next, you'll need to install the following Ruby gems: `jekyll-paginate jekyll-redirect-from jekyll-sitemap`
+
+```
+$ gem install jekyll-paginate jekyll-redirect-from jekyll-sitemap
+```
+
+## Git
+
+Make sure you have [Git](https://git-scm.com/) installed. Then, clone this project:
+
+```
+$ git clone https://github.com/cncoulter/graph-paper/
+```
+
+## Configuration
+
+Your `_config.yml` file is where Jekyll stores the settings that affect your whole blog, so if you're forking Graph Paper to make your own website, start by updating `_config.yml`.
 
 Some fields in `_config.yml` are labeled as required. For example:
 
@@ -20,13 +63,85 @@ title: Graph Paper # Required.
 
 If any field is marked as required, make sure you put in some value for it. If it's marked as required, that's because another page (such as `SEO.html`) assumes it's there, so if you leave the field blank, then your SEO settings (for example) will get messed up.
 
+---
+
+# Multiple Authors
+
+Graph Paper is designed to support multiple authors. Once you set up a new author, it's easy to mark them as a post's author and have their bio automatically included below the post. Graph Paper will also display links to an author's website, email, and social media profiles, and you can also set up an personal [Atom feed](https://en.wikipedia.org/wiki/Atom_(Web_standard)) for each author that shares their posts. For all of this to work smoothly, however, it does take a little bit of work to set up a new author.
+
+Graph Paper stores info about authors within a [collection](https://jekyllrb.com/docs/collections/), so each author should have their own file under `collections/_people/`.
+
+Whatever you title that file will be the URL for the author's page. For example, Lorri Ipsum's file is named `Lorri Ipsum.md`, so the URL for her page is [https://graphpaper.cncoulter.com/people/Lorri-Ipsum/](https://graphpaper.cncoulter.com/people/Lorri-Ipsum/). If we titled her page `lorri.md`, then the URL for her page would be [https://graphpaper.cncoulter.com/people/lorri/](https://graphpaper.cncoulter.com/people/lorri/).
+
+The content of their file should be their bio (in Markdown), and the YAML frontmatter stores their info. For example, here's `collections/_people/Lorri Ipsum.md`:
+
+```
+---
+layout: people
+title: Lorri Ipsum
+code_name: lorri
+photo: lorri.jpg
+website: https://unsplash.com/photos/qO-PIF84Vxg
+facebook: tk
+instagram: tk
+twitter: tk
+tumblr: tk
+patreon: tk
+youtube: tk
+spotify: tk
+bandcamp: tk
+linkedin: tk
+github: tk
+email: tk
+feed: yes
+---
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi volutpat ac ligula maximus commodo. Donec mollis finibus cursus. Phasellus at tortor sit amet odio eleifend finibus. Sed gravida ante a est porttitor volutpat. Aliquam sollicitudin sem sed lobortis vehicula. Sed varius leo vitae velit vulputate, nec laoreet lorem semper. Fusce sit amet nunc rutrum tellus egestas varius. Sed ultrices consequat turpis, a varius quam sodales id. Pellentesque vestibulum aliquam magna vitae egestas. Fusce sagittis enim mauris, vitae interdum urna commodo a.
+```
+
+`layout` should be `people`, and `title` should be the person's name as you want it to appear on site. `photo` should be the filename for a picture of the person. The picture should be stored in `img/`.
+
+`code_name` is a shorthand used in the YAML frontmatter of blog posts to refer to the author. For example, Lorri Ipsum's code_name is `lorri`, so blog posts written by Lorri include this line in the YAML frontmatter:
+
+```
+author: lorri
+```
+
+`website` through `feed` are all optional. If you include text there, it'll show up as links displayed below the author's bio. You only need to include the handle. For example, if Lorri's Twitter profile is [https://twitter.com/getbootstrap](https://twitter.com/getbootstrap), then Lorri's frontmatter should be:
+
+```
+twitter: getbootstrap
+```
+
+Finally, do you want the author to have their own individual [Atom feed](https://en.wikipedia.org/wiki/Atom_(Web_standard))? If so include:
+
+```
+feed: yes
+```
+
+That will include a link to the author's Atom feed, but *it won't set up* an Atom feed. To set one up, add a folder to `people/`. Title the new folder with the author's display name (using hyphens instead of spaces). For example, for Cam Coulter, create `people/Cam-Coulter/`. Then, copy `people/Lorri-Ipsum/feed.xml` to the new author's folder. For example:
+
+```
+$ cp ./people/Lorri-Ipsum/feed.xml ./people/Cam-Coulter/feed.xml
+```
+
+Finally, open the new file and in line seven, change "lorri" to the new author's code_name.
+
+Now, your new author is all set up with their own [author page]({{ site.baseurl }}/people/Lorri-Ipsum/) and their own personal [Atom feed]({{ site.baseurl }}/people/Lorri-Ipsum/feed.xml)!
+
+---
+
 # Images
+
+Like with authors, it takes a little work to set up images in Graph Paper.
+
+{% include image.html file="glenn-carstens-peters-0iB6_GX7BXk-unsplash.jpg" %}
 
 ## Image Metadata
 
 Store all your images in `/img/`.
 
-For each image, you are required to have an HTML file in the images collection (`/collections/_images/`). The HTML file should look like this:
+For each image, you are required to have an **HTML** file in the images collection (`/collections/_images/`). The HTML file should look like this:
 
 {% highlight html %}
 ---
@@ -76,11 +191,9 @@ If you want to use an image on a page or in a post without labeling it as the fe
 </figure>
 {% endraw %}{% endhighlight %}
 
-# Multiple Authors
-
-* general support
-* RSS feeds
+---
 
 # Blog posts
 
 * start on H2
+* YAML frontmatter
