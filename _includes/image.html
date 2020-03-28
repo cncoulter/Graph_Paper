@@ -1,4 +1,4 @@
-{% assign image = site.images | where: 'title', {{ include.file }} | first %}
+{% assign image = site.images | where: 'title', include.file | first %}
 <figure class="figure">
     <img src="{{ site.baseurl }}/img/{{ image.title }}" class="figure-img img-fluid" alt="{{ image.alt }}" title="{{ image.caption }}">
     <figcaption class="figure-caption">{{ image.content }}</figcaption>
