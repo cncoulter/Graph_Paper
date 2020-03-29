@@ -1,42 +1,10 @@
 ---
-layout: page
+layout: fork
 permalink: /fork/
 title: Fork
 ---
 
-<div class="row">
-    <div class="col-lg-6 mx-auto">
-        <div class="card">
-            <h5 class="card-header">Table of Contents</h5>
-            <div class="card-body">
-                <ol class="card-text">
-                    <li><a href="#setup">Setup</a></li>
-                    <ul>
-                        <li><a href="#jekyll">Jekyll</a></li>
-                        <li><a href="#git">Git</a></li>
-                        <li><a href="#configuration">Configuration</a></li>
-                    </ul>
-                    <li><a href="#multiple-authors">Multiple Authors</a></li>
-                    <li><a href="#images">Images</a>
-                        <ul>
-                            <li><a href="#image-metadata">Image Metadata</a></li>
-                            <li><a href="#using-images">Using Images</a>
-                                <ul>
-                                    <li><a href="#as-featured-images">As Featured Images</a></li>
-                                    <li><a href="#on-a-page">On a Page</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>Blog Posts</li>
-                    <li><a href="#"></a></li>
-                </ol>
-            </div>
-        </div>
-    </div>
-</div>
-
-# Setup
+# Initial Setup
 
 ## Jekyll
 
@@ -209,7 +177,101 @@ If you want to use an image on a page or in a post without labeling it as the fe
 
 ---
 
-# Blog posts
+# Posts
 
-* start on H2
-* YAML frontmatter
+Once you get authors and images set up, adding new posts is easy.
+
+Store your posts in `collections/_posts/`.
+
+## YAML Frontmatter
+
+What [YAML frontmatter](https://jekyllrb.com/docs/front-matter/) should you include with your posts? There's an unpublished template that you can use as a reference: `collections/_posts/2020-01-01-Unpublished-Template.md`. It looks like this:
+
+{% highlight html %}
+---
+layout: post
+published: false
+title: "Unpubished Template"
+date: 2020-01-01 06:00
+date_modified: 2020-01-08 13:00
+author: lorri # This should be a person's code_name from your people collection
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+categories:
+- Lorem Ipsum
+tags:
+- Lorem Ipsum
+image: notepad-593363_1920.jpg
+comments: true
+excerpt_separator: "[//]: #more"
+---
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dapibus nec odio sit amet sollicitudin. Aliquam et finibus augue, eu egestas ipsum. Sed quis laoreet orci. Pellentesque placerat rutrum mi, ut imperdiet risus rhoncus ac. Maecenas commodo urna non elit aliquam rutrum. Quisque id nibh luctus, placerat turpis tempor, elementum mauris. Proin in varius arcu, ac fermentum mauris. Cras fringilla efficitur tortor, nec imperdiet sapien lobortis sit amet. Praesent mollis felis eget augue feugiat, vel semper nulla lobortis. Vivamus rhoncus lectus metus, vitae sodales massa ultricies sed.
+{% endhighlight %}
+
+`title:` is required.
+
+`date:` is required.
+
+`date_modified:` is optional.
+
+`author:` is required. This must be the author's code_name from `collections/_people/`.
+
+`description:` is optional. You can set archive pages to display either this description of the post, an excerpt of the post, or the complete post. Additionally, when shared on social media, this description is usually shown (through Twitter card support --- again, see `_includes/SEO.html`). You can use `description:` both when `layout: post` as well as when `layout: page`. In the example below, the post title is "Favorite 2019 Short Stories" and the post description is "Here are my favorite short stories from 2019."
+
+{% include image.html file="Screenshot-Twitter-Card-Validator.png" %}
+
+`categories:` is optional.
+
+`tags:` is optional.
+
+`image:` is optional. All you have to do is include the image file name, and on posts, the featured image will automatically appear on archive pages and at the top of the post itself (with its caption! Assuming you set up the [image metadata file](#image-metadata) correctly). You can also use `image:` when `layout: page`. On pages, the image will not automatically display; however, it will appear when shared on social media (through Twitter card support --- again, see `_includes/SEO.html`).
+
+`comments:` is optional. If you want comments on the page, set this to `true`. If the value is `false` or if you delete this line, the page will not include comments.
+
+`excerpt_separator:` is optional. By default, Graph Paper displays post excerpts on archive pages. By default, [Jekyll selects the first paragraph](https://jekyllrb.com/docs/posts/#post-excerpts) of a post as the excerpt. If you want more paragraphs to be included in the excerpt, then include `excerpt_separator: [//]: #more` in the YAML frontmatter and place `[//]: #more` to mark where you want the excerpt to end. If you leave `excerpt_separator: [//]: #more` *and don't include* `[//]: #more` somewhere in the file, Jekyll will by default excerpt *the entire post*. Therefore, you should either (1) delete this line from the YAML frontmatter and the post's excerpt will be its first paragraph, or (2) include this line and make sure you place `[//]: #more` somewhere in the post.
+
+## Headings
+
+The post title is formatted as `<h1>`, so make sure any section headings in a post start with `<h2>`. (When `layout: page`, Graph Paper styles the title as `<h1 class="display-4">`, so pages in Graph Paper can be styled starting with regular `<h1>`.)
+
+## Syntax Highlighting
+
+You can use backticks to style a word or a phrase as code. For example: \`code\` appears as `code`.
+
+You can use three backticks before and after a section to designate the section as code. For example:
+
+````
+```
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi volutpat ac ligula maximus commodo. Donec mollis finibus cursus.
+```
+````
+
+is rendered as:
+
+```
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi volutpat ac ligula maximus commodo. Donec mollis finibus cursus.
+```
+
+You can use {% raw %}`{% highlight html %}` and `{% endhighlight %}`{% endraw %} to designate a section as code and use syntax highlighting. For example:
+
+```
+{% raw %}{% highlight html %}{% endraw %}
+<h1>Heading 1</h1>
+<p>Lorem ipsum dolor sit amet, <em>consectetur adipiscing elit</em>. Morbi volutpat ac ligula maximus commodo. Donec mollis finibus cursus.</p>
+{% raw %}{% endhighlight %}{% endraw %}
+```
+
+is rendered as:
+
+{% highlight html %}
+<h1>Heading 1</h1>
+<p>Lorem ipsum dolor sit amet, <em>consectetur adipiscing elit</em>. Morbi volutpat ac ligula maximus commodo. Donec mollis finibus cursus.</p>
+{% endhighlight %}
+
+---
+
+# Share!
+
+* email or tweet
+* list of forks on about page?
+* feel free to submit a blog post (by submitting a pull request) which shows off you site and explains how you set it up. Blog posts will only be accepted if it's under a creative commons license.

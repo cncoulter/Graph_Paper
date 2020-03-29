@@ -31,12 +31,17 @@ As you can see, it's not quite ready yet.
 * ~~Category index/archive pages~~
 * ~~Add about this page~~
 * ~~copyright info syntax highlighting~~
-* Fix author links?
-
-* Documentation: Fork, Contribute, About this Site, code/in-line documentation & comments
 * ~~Design updates/beautify: blog (with blog sidebar), add archive page, move blog sidebar from post to blog main page, beautiful alternative options for blog archive list~~
+* ~~Documentation: Contribute~~
+
+* Fix author links?
+* Update everywhere images are used to use the include statement
+* Documentation: Fork
 * What YAML frontmatter is required for posts?
 * Reuse compliant
+* Documentation: About This Site
+* Documentation: Code/in-line documentation & comments
+
 * Add blog posts
 * Invite people to share their forks
 * Allow folks to donate me to via PayPal and kofi?

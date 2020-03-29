@@ -59,7 +59,7 @@ my_FA_kit: https://kit.fontawesome.com/b41e0c7e90.js # Required.
 disqus:
     # Leave shortname blank to disable comments site-wide.
     # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
-    shortname: graphpaper
+    shortname: graphpaper # Update this for your own site.
 
 # Defaults
 defaults:

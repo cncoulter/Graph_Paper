@@ -14,7 +14,7 @@ image: notepad-593363_1920.jpg
 comments: false
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dapibus nec odio sit amet sollicitudin. Aliquam et finibus augue, eu egestas ipsum. Sed quis laoreet orci. Pellentesque placerat rutrum mi, ut imperdiet risus rhoncus ac. Maecenas commodo urna non elit aliquam rutrum. Quisque id nibh luctus, placerat turpis tempor, elementum mauris. Proin in varius arcu, ac fermentum mauris. Cras fringilla efficitur tortor, nec imperdiet sapien lobortis sit amet. Praesent mollis felis eget augue feugiat, vel semper nulla lobortis. Vivamus rhoncus lectus metus, vitae sodales massa ultricies sed.
+Lorem ipsum dolor **sit** amet, consectetur adipiscing elit. Integer dapibus nec odio sit amet sollicitudin. Aliquam et finibus augue, eu egestas ipsum. Sed quis laoreet orci. Pellentesque placerat rutrum mi, ut imperdiet risus rhoncus ac. Maecenas commodo urna non elit aliquam rutrum. Quisque id nibh luctus, placerat turpis tempor, elementum mauris. Proin in varius arcu, ac fermentum mauris. Cras fringilla efficitur tortor, nec imperdiet sapien lobortis sit amet. Praesent mollis felis eget augue feugiat, vel semper nulla lobortis. Vivamus rhoncus lectus metus, vitae sodales massa ultricies sed.
 
 ## Nam Dignissim
 
@@ -24,7 +24,6 @@ Nam dignissim cursus justo vitae vehicula. Curabitur id ante metus. Aliquam erat
 * Mauris quis neque sollicitudin, bibendum sem vitae, malesuada risus.
 * Integer mattis massa a elit luctus efficitur.
 * Aenean sed magna a felis commodo feugiat.
-
 
 1. Donec eget augue placerat, aliquet enim ac, consequat ligula
 2. Phasellus vel quam egestas, laoreet eros eget, ornare justo.

@@ -49,15 +49,15 @@ title: Blog
                     </p>
                     {% endif %}
 
-                    <!-- List the post description -->
-                    <!-- <p>{{ post.description | markdownify }}</p> -->
+                    <!-- List the post description
+                    <p class="lead">{{ post.description }}</p> -->
 
                     <!-- Alternatively, you can use an except, which by default is the first paragraph of the post -->
-                    <p>{{ post.excerpt }}</p>
+                    <article>{{ post.excerpt | markdownify }}</article>
                     <p><a href="{{ post.url }}">[Read more…]</a></p>
 
-                    <!-- Alternatively, you can display the entire blog post -->
-                    <!-- {{ post.content }} -->
+                    <!-- Alternatively, you can display the entire blog post
+                    {{ post.content }} -->
 
                     {% if forloop.last == false %}
                         <hr>

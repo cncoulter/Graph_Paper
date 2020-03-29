@@ -1,0 +1,75 @@
+---
+layout: default
+---
+
+<!-- Page Content-->
+<article>
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <!-- Post Content Column -->
+            <div class="col-lg-8">
+
+                <!-- Title -->
+                <h1 class="display-4 mt-4">{{ page.title | escape }}</h1>
+
+                <!-- Post Content -->
+                <p class="lead">Ready for fork Graph Paper and start your own website? Here's how.</p>
+
+            </div>
+
+        </div>
+
+        <div class="row justify-content-center">
+
+            <!-- Column 1: Table of Contents -->
+            <div class="col-lg-4">
+
+                <div class="card">
+                    <h5 class="card-header">Table of Contents</h5>
+                    <div class="card-body">
+                        <ol class="card-text">
+                            <li><a href="#initial-setup">Initial Setup</a></li>
+                            <ul>
+                                <li><a href="#jekyll">Jekyll</a></li>
+                                <li><a href="#git">Git</a></li>
+                                <li><a href="#configuration">Configuration</a></li>
+                            </ul>
+                            <li><a href="#multiple-authors">Multiple Authors</a></li>
+                            <li><a href="#images">Images</a>
+                                <ul>
+                                    <li><a href="#image-metadata">Image Metadata</a></li>
+                                    <li><a href="#using-images">Using Images</a>
+                                        <ul>
+                                            <li><a href="#as-featured-images">As Featured Images</a></li>
+                                            <li><a href="#on-a-page">On a Page</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#posts">Posts</a>
+                                <ul>
+                                    <li><a href="#yaml-frontmatter">YAML Frontmatter</a></li>
+                                    <li><a href="#headings">Headings</a></li>
+                                    <li><a href="#syntax-highlighting">Syntax Highlighting</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#share">Share!</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post Content Column -->
+            <div class="col-lg-8">
+
+                <!-- Post Content -->
+                <div>{{ content }}</div>
+
+            </div>
+
+        </div>
+
+    </div>
+</article>
