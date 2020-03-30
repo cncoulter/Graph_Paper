@@ -22,12 +22,8 @@ layout: default
                     </div>
 
                     <!-- Row 1, Col 2: Photo -->
-                    <div class="col-md-4">
-                        {% assign image = site.images | where: 'title', page.photo | first %}
-                        <figure class="figure mt-4">
-                            <img src="{{ site.baseurl }}/img/{{ image.title }}" class="figure-img img-fluid" alt="{{ image.alt }}" title="{{ image.caption }}">
-                            <figcaption class="figure-caption">{{ image.content | markdownify }}</figcaption>
-                        </figure>
+                    <div class="col-md-4 mt-4">
+                        {% include image.html file=page.photo %}
                     </div>
                 </div>
             </div>

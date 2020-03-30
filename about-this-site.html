@@ -4,12 +4,7 @@ permalink: /about-this-site/
 title: About This Site
 ---
 
-{% assign image = site.images | where: 'title', "notepad-593363_1920.jpg" | first %}
-
-<figure class="figure">
-    <img src="{{ site.baseurl }}/img/{{ image.title }}" class="figure-img img-fluid" alt="{{ image.alt }}" title="{{ image.caption }}">
-    <figcaption class="figure-caption">{{ image.content }}</figcaption>
-</figure>
+{% include image.html file="notepad-593363_1920.jpg" %}
 
 <p><a href="https://github.com/cncoulter/Graph-Paper">Graph Paper</a> is:</p>
 

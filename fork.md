@@ -40,7 +40,8 @@ If any field is marked as required, make sure you put in some value for it. If i
 
 # Multiple Authors
 
-Graph Paper is designed to support multiple authors. Once you set up a new author, it's easy to mark them as a post's author and have their bio automatically included below the post. Graph Paper will also display links to an author's website, email, and social media profiles, and you can also set up an personal [Atom feed](https://en.wikipedia.org/wiki/Atom_(Web_standard)) for each author that shares their posts. For all of this to work smoothly, however, it does take a little bit of work to set up a new author.
+Graph Paper is designed to support [multiple authors]({{ site.baseurl }}/people/). Once you set up a new author, it's easy to mark them as a post's author and have their bio automatically included below the post. Graph Paper will also display links to an author's website, email, and social media profiles, and you can also set up an personal [Atom feed](https://en.wikipedia.org/wiki/Atom_(Web_standard)) for each author that shares their posts. Additionally, each author gets [their own page]({{ site.baseurl }}/people/Lorri-Ipsum) which displays their bio, links, photo, and posts.
+For all of this to work smoothly, however, it does take a little bit of work to set up a new author.
 
 Graph Paper stores info about authors within a [collection](https://jekyllrb.com/docs/collections/), so each author should have their own file under `collections/_people/`.
 
@@ -124,7 +125,7 @@ Additionally, if you want to add an image anywhere else in the site, just use th
 
 You should store all of your images in `img/`.
 
-Graph Paper stores image metadata and captions within a [collection](https://jekyllrb.com/docs/collections/). For each image, you are required to have an HTML file in the images collection (`/collections/_images/`). This file stores the image's caption and metadata so that you personally don't need to copy that information every time you use the image. The caption in the above photo is pulled from `collections/_images/glenn-carstens-peters-0iB6_GX7BXk-unsplash.html`. As you can see in this example, give the image itself and its metadata file the same filename (just change the extension).
+Graph Paper stores image metadata and captions within a [collection](https://jekyllrb.com/docs/collections/). For each image, you are required to have an HTML file in the images collection (`/collections/_images/`). This file stores the image's caption and metadata so that you personally don't need to copy that information every time you use the image. The caption in the above photo is pulled from `collections/_images/glenn-carstens-peters-0iB6_GX7BXk-unsplash.html`. As you can see in this example, give the image itself and its metadata file the same filename (just change the extension). Neither the image itself nor its metadata file should include spaces in its filename. 
 
 The HTML file should look like this:
 

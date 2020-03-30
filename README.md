@@ -33,9 +33,9 @@ As you can see, it's not quite ready yet.
 * ~~copyright info syntax highlighting~~
 * ~~Design updates/beautify: blog (with blog sidebar), add archive page, move blog sidebar from post to blog main page, beautiful alternative options for blog archive list~~
 * ~~Documentation: Contribute~~
+* ~~Update everywhere images are used to use the include statement~~
 
 * Fix author links?
-* Update everywhere images are used to use the include statement
 * Documentation: Fork
 * What YAML frontmatter is required for posts?
 * Reuse compliant

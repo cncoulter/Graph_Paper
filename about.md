@@ -6,12 +6,7 @@ title: About
 
 <p class="lead">Graph Paper is a <a href="https://jekyllrb.com/">Jekyll</a> website that incorporates <a href="https://getbootstrap.com/">Bootstrap</a>. Forking Graph Paper is a quick and easy way to start a Jekyll website/blog with the Bootstrap grid already set up.</p>
 
-{% assign image = site.images | where: 'title', "notepad-593363_1920.jpg" | first %}
-
-<figure class="figure">
-    <img src="{{ site.baseurl }}/img/{{ image.title }}" class="figure-img img-fluid" alt="{{ image.alt }}" title="{{ image.caption }}">
-    <figcaption class="figure-caption">{{ image.content }}</figcaption>
-</figure>
+{% include image.html file="notepad-593363_1920.jpg" %}
 
 # Features
 

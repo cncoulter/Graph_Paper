@@ -35,11 +35,7 @@ layout: default
                 </p>
 
                 <!-- Featured Image -->
-                {% assign image = site.images | where: 'title', page.image | first %}
-                <figure class="figure">
-                    <img src="{{ site.baseurl }}/img/{{ image.title }}" class="figure-img img-fluid" alt="{{ image.alt }}" title="{{ image.caption }}">
-                    <figcaption class="figure-caption">{{ image.content }}</figcaption>
-                </figure>
+                {% include image.html file=page.image %}
 
                 <!-- Post Content -->
                 <div>{{ content }}</div>
