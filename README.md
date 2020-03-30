@@ -34,10 +34,9 @@ As you can see, it's not quite ready yet.
 * ~~Design updates/beautify: blog (with blog sidebar), add archive page, move blog sidebar from post to blog main page, beautiful alternative options for blog archive list~~
 * ~~Documentation: Contribute~~
 * ~~Update everywhere images are used to use the include statement~~
+* ~~What YAML frontmatter is required for posts?~~
+* ~~Documentation: Fork~~
 
-* Fix author links?
-* Documentation: Fork
-* What YAML frontmatter is required for posts?
 * Reuse compliant
 * Documentation: About This Site
 * Documentation: Code/in-line documentation & comments

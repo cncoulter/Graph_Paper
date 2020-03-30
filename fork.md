@@ -125,7 +125,7 @@ Additionally, if you want to add an image anywhere else in the site, just use th
 
 You should store all of your images in `img/`.
 
-Graph Paper stores image metadata and captions within a [collection](https://jekyllrb.com/docs/collections/). For each image, you are required to have an HTML file in the images collection (`/collections/_images/`). This file stores the image's caption and metadata so that you personally don't need to copy that information every time you use the image. The caption in the above photo is pulled from `collections/_images/glenn-carstens-peters-0iB6_GX7BXk-unsplash.html`. As you can see in this example, give the image itself and its metadata file the same filename (just change the extension). Neither the image itself nor its metadata file should include spaces in its filename. 
+Graph Paper stores image metadata and captions within a [collection](https://jekyllrb.com/docs/collections/). For each image, you are required to have an HTML file in the images collection (`/collections/_images/`). This file stores the image's caption and metadata so that you personally don't need to copy that information every time you use the image. The caption in the above photo is pulled from `collections/_images/glenn-carstens-peters-0iB6_GX7BXk-unsplash.html`. As you can see in this example, give the image itself and its metadata file the same filename (just change the extension). Neither the image itself nor its metadata file should include spaces in its filename.
 
 The HTML file should look like this:
 
@@ -273,6 +273,6 @@ is rendered as:
 
 # Share!
 
-* email or tweet
-* list of forks on about page?
-* feel free to submit a blog post (by submitting a pull request) which shows off you site and explains how you set it up. Blog posts will only be accepted if it's under a creative commons license.
+After you finish forking Graph Paper to make your own website, let us know!
+
+Send Cam a [tweet](https://twitter.com/camncoulter) or an [email](https://www.cncoulter.com/about/), or if you want, you can write a blog post which shows off your site and explains how you set it up. You can email your blog post to Cam or submit it via pull request. We ask that any blog posts you send us are licensed under a [Creative Commons license](https://creativecommons.org/).
