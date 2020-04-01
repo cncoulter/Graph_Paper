@@ -36,6 +36,7 @@ As you can see, it's not quite ready yet.
 * ~~Update everywhere images are used to use the include statement~~
 * ~~What YAML frontmatter is required for posts?~~
 * ~~Documentation: Fork~~
+* ~~Add Lorem Ipsum blog posts (to display blog pagination)~~
 
 * Reuse compliant
 * Documentation: About This Site

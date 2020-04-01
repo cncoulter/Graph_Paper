@@ -1,16 +1,16 @@
 ---
 layout: post
 published: true
-title: "Lorem Ipsum (1 of 3)"
-date: 2020-01-01 09:00
-date_modified: 2020-01-05 13:00
+title: "Lorem Ipsum (3 of 3)"
+date: 2020-01-20 09:00
+date_modified: 2020-01-25 13:00
 author: lorri # This should be a person's code_name from your people collection
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dapibus nec odio sit amet sollicitudin.
 categories:
 - Lorem Ipsum
 tags:
 - Lorem Ipsum
-image: benjamin-smith-jWFXGclQr1M-unsplash.jpg
+image: kelly-sikkema-9-kKRL6aiik-unsplash.jpg
 comments: false
 excerpt_separator: "[//]: #more"
 ---
