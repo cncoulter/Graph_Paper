@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2020 Cam N. Coulter <cam@cncoulter.com>
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 _site
 .sass-cache
 .jekyll-metadata

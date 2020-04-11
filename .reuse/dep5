@@ -1,0 +1,9 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Graph Paper
+Upstream-Contact: Cam N. Coulter <cam@cncoulter.com>
+Source: https://graphpaper.cncoulter.com/
+
+Files: css/bootstrap/*
+Copyright:  2011-2019 Twitter, Inc.
+            2011-2019 The Bootstrap Authors
+License: MIT

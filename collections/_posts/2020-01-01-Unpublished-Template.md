@@ -1,4 +1,6 @@
 ---
+# SPDX-FileCopyrightText: 2020 Cam N. Coulter <cam@cncoulter.com>
+# SPDX-License-Identifier: CC0-1.0
 layout: post
 published: false
 title: "Unpubished Template"

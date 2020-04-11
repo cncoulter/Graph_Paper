@@ -1,4 +1,6 @@
 ---
+# SPDX-FileCopyrightText: 2020 Cam N. Coulter <cam@cncoulter.com>
+# SPDX-License-Identifier: CC-BY-SA-4.0
 layout: people
 title: Cam N. Coulter
 code_name: cam

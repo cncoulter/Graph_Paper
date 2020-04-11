@@ -1,3 +1,8 @@
+{% comment %}
+SPDX-FileCopyrightText: 2020 Cam N. Coulter <cam@cncoulter.com>
+SPDX-License-Identifier: GPL-3.0-or-later
+{% endcomment %}
+
 {% assign image = site.images | where: 'title', include.file | first %}
 <figure class="figure">
     <img src="{{ site.baseurl }}/img/{{ image.title }}" class="figure-img img-fluid" alt="{{ image.alt }}" title="{{ image.caption }}">

@@ -1,3 +1,8 @@
+<!--
+SPDX-FileCopyrightText: 2020 Cam N. Coulter <cam@cncoulter.com>
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
 # Graph Paper
 
 **If you want Jekyll + Bootstrap, start here.**
@@ -37,12 +42,17 @@ Graph Paper is a Jekyll website integrated with Bootstrap and packed with featur
 * ~~What YAML frontmatter is required for posts?~~
 * ~~Documentation: Fork~~
 * ~~Add Lorem Ipsum blog posts (to display blog pagination)~~
+* ~~Reuse compliant~~
+* ~~Documentation: About This Site~~
 
-* Reuse compliant
-* Documentation: About This Site
 * Documentation: Code/in-line documentation & comments
 
-* Add blog posts
+* Add blog post
 * Invite people to share their forks
 * Allow folks to donate me to via PayPal and kofi?
 * Google Analytics
+
+## Copyright & Licensing
+
+Graph Paper is [REUSE-compliant](https://reuse.software/) and released under the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version. Some individual files within the project are released under different licenses (such as the MIT License or Creative Commons licenses), so check each file for the complete copyright and licensing information.

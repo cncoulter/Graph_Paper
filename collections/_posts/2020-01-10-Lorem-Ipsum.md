@@ -1,4 +1,6 @@
 ---
+# SPDX-FileCopyrightText: 2020 Cam N. Coulter <cam@cncoulter.com>
+# SPDX-License-Identifier: CC0-1.0
 layout: post
 published: true
 title: "Lorem Ipsum (2 of 3)"
