@@ -93,6 +93,14 @@ SPDX-License-Identifier: GPL-3.0-or-later
         </li>
     {% endif %}
 
+    {% if page.paypal %}
+        <li class="list-inline-item">
+            <a href="https://paypal.me/{{ page.paypal }}" data-toggle="tooltip" data-placement="bottom" title="PayPal">
+                <i class="fab fa-paypal"></i>
+            </a>
+        </li>
+    {% endif %}
+
     {% if page.email %}
         <li class="list-inline-item">
             <a href="mailto:{{ page.email }}" data-toggle="tooltip" data-placement="bottom" title="Email">

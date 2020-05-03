@@ -16,6 +16,7 @@ spotify: tk
 bandcamp: tk
 linkedin: tk
 github: tk
+paypal: tk
 email: tk
 feed: yes
 ---

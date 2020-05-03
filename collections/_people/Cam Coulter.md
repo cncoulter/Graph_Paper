@@ -9,6 +9,7 @@ website: https://www.cncoulter.com/
 twitter: camncoulter
 linkedin: cameronncoulter
 github: cncoulter
+paypal: camncoulter
 feed: yes
 ---
 
