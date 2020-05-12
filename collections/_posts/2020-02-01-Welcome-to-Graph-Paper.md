@@ -29,8 +29,6 @@ This is where Graph Paper comes in. Graph Paper is a Jekyll website/blog, integr
 
 I confess: I mostly made Graph Paper for myself, to get extra web design practice and so that in the future I'll be able to quickly and easily spin up beautiful and functional websites. But I hope Graph Paper can be helpful for others as well. I've done my best to keep the code clean, the project well-documented, and the copyright and licensing info explicit. If Graph Paper is difficult for you to use for some reason, please let me know and I'll do my best to improve it!
 
-
-
 ## Accessibility
 
 Accessibility and universal design are super important, and they're even more important for a project like Graph Paper, a template upon which other websites can be built. I'm familiar with the basic principles of accessible web design, and I've done my best to make Graph Paper as accessible and WCAG-compliant as possible.
