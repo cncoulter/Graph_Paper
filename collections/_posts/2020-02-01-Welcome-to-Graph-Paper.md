@@ -4,9 +4,9 @@
 layout: post
 published: true
 title: "Welcome to Graph Paper!"
-date: 2020-02-01 09:00
+date: 2020-05-11 17:56
 author: cam # This should be a person's code_name from your people collection
-description: Welcome to Graph Paper!
+description: It is my great pleasure to finally release Graph Paper! This is a project that I've been working on sporadically over the past year. Graph Paper is a Jekyll website/blog, integrated with Bootstrap, that’s ready for you to fork.
 categories:
 - Graph Paper
 tags:
@@ -17,26 +17,22 @@ image: notepad-593363_1920.jpg
 comments: true
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dapibus nec odio sit amet sollicitudin. Aliquam et finibus augue, eu egestas ipsum. Sed quis laoreet orci. Pellentesque placerat rutrum mi, ut imperdiet risus rhoncus ac. Maecenas commodo urna non elit aliquam rutrum. Quisque id nibh luctus, placerat turpis tempor, elementum mauris. Proin in varius arcu, ac fermentum mauris. Cras fringilla efficitur tortor, nec imperdiet sapien lobortis sit amet. Praesent mollis felis eget augue feugiat, vel semper nulla lobortis. Vivamus rhoncus lectus metus, vitae sodales massa ultricies sed.
+It is my great pleasure to finally release Graph Paper! This is a project that I've been working on sporadically over the past year.
 
-## Nam Dignissim
+I'm a hobbyist web and ebook designer. I started with installing and designing WordPress sites. I love WordPress because it's packed with features and it's accessible for techies and non-techies alike, but for me it also feels too big and too complex at times, especially from the back-end point-of-view. So upon discovering [Jekyll](https://jekyllrb.com/), I quickly fell in love. Jekyll is simple and flexible. It gives me control over everything I want without too much extra stuff in the way to worry about. Also, you can quickly [host a Jekyll website on GitHub for free](https://pages.github.com/) (as well as move your site over to basically any other hosting service you'd like without too much hassle). Jekyll's great.
 
-Nam dignissim cursus justo vitae vehicula. Curabitur id ante metus. Aliquam erat volutpat. Pellentesque viverra erat venenatis, lobortis sem nec, aliquam turpis. Pellentesque ultricies, dolor finibus suscipit semper, massa dolor mattis massa, in congue nisi sem id eros. Cras faucibus massa porttitor erat pellentesque, vitae interdum nisi volutpat. Nulla mattis gravida nunc, id varius nibh aliquam quis. Curabitur ac consectetur elit. Nam vitae mi mauris. Nunc rhoncus malesuada tellus id ullamcorper. Sed sagittis nunc lectus, sed venenatis ante malesuada eu. Vestibulum egestas risus id nisi viverra efficitur.
+You know what else is great? [Bootstrap](https://getbootstrap.com/). Once I discovered the Bootstrap framework, suddenly it was so easy to create beautiful, responsive websites.
 
-* Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-* Mauris quis neque sollicitudin, bibendum sem vitae, malesuada risus.
-* Integer mattis massa a elit luctus efficitur.
-* Aenean sed magna a felis commodo feugiat.
+For me, Jekyll and Bootstrap are a perfect match for one another. Bootstrap is my building blocks; Jekyll is my glue. When I put them together, there's only one thing I'm missing: features. In Jekyll, you can implement most of the features you'd expect in a modern website or blog: tags, categories, comments, pagination, featured images, and more. However, those features aren't ready-to-go from the get-go.
+
+This is where Graph Paper comes in. Graph Paper is a Jekyll website/blog, integrated with Bootstrap, that's ready for you to fork. Moreover, Graph Paper is already set up with all of those features you'd expect in a modern website. (Check out [the about page]({{ site.baseurl }}/about) for the complete list.) Once you fork the project and start your own website, you can keep those features, tweak them, or remove them as you like. If Graph Paper is missing any features you wish it had, let me know! You can send me an email or a tweet, or, if you're technically inclined, implement the feature yourself and send a pull request.
+
+I confess: I mostly made Graph Paper for myself, to get extra web design practice and so that in the future I'll be able to quickly and easily spin up beautiful and functional websites. But I hope Graph Paper can be helpful for others as well. I've done my best to keep the code clean, the project well-documented, and the copyright and licensing info explicit. If Graph Paper is difficult for you to use for some reason, please let me know and I'll do my best to improve it!
 
 
-1. Donec eget augue placerat, aliquet enim ac, consequat ligula
-2. Phasellus vel quam egestas, laoreet eros eget, ornare justo.
-3. Maecenas et metus pellentesque, venenatis lectus ut, finibus enim.
-4. Maecenas fermentum mauris eu nisi efficitur venenatis.
-5. Integer vel dui facilisis, efficitur nibh vitae, consectetur nisi.
 
-## Etiam Vel Hendrerit Justo
+## Accessibility
 
-Etiam vel hendrerit justo, non consequat diam. Ut sed nisl accumsan, rutrum mi at, efficitur nibh. Mauris aliquet arcu ut leo venenatis tincidunt. Sed commodo scelerisque feugiat. Fusce scelerisque dignissim mollis. Proin a pretium ex. Maecenas mi diam, auctor at nisl id, pulvinar pulvinar nunc. Cras porta nec dolor non feugiat. Vestibulum tristique odio sapien, vel sagittis arcu suscipit vel. Curabitur odio dui, pellentesque vitae magna vel, semper eleifend tellus. Phasellus ex erat, molestie id vehicula vel, condimentum eget sem.
+Accessibility and universal design are super important, and they're even more important for a project like Graph Paper, a template upon which other websites can be built. I'm familiar with the basic principles of accessible web design, and I've done my best to make Graph Paper as accessible and WCAG-compliant as possible.
 
-Nunc sollicitudin dolor sed rhoncus aliquet. Nunc leo purus, dapibus nec tellus at, tempor vulputate magna. Cras vel tortor nulla. Fusce tristique, ex a feugiat hendrerit, magna dolor auctor ex, at accumsan magna neque sit amet neque. Cras condimentum mi ut velit fringilla, ac ullamcorper purus dignissim. Integer vehicula velit est, hendrerit aliquam lacus porta at. Donec in nulla in nisl pretium venenatis nec quis metus. Fusce ornare ipsum vitae ligula porttitor, vel volutpat magna iaculis. Duis sodales, metus et pulvinar congue, nunc tellus posuere turpis, sit amet ornare libero felis vitae leo. Praesent id urna elementum, tincidunt nisl sed, venenatis mauris. Donec fermentum, mi sed feugiat bibendum, elit enim condimentum augue, vitae feugiat ligula sem ac ipsum. Nulla ut semper nunc, vel euismod quam. Donec quis sapien laoreet, finibus dolor sit amet, lobortis enim.
+However, I'm definitely still learning about accessibility and universal design, and there's a lot to it once you start digging into the details. As I learn more, I will keep updating Graph Paper to improve its accessibility, but it would also be helpful if you could chip in. Please [report](https://github.com/cncoulter/Graph-Paper/issues) any accessibility issues you find and/or fork the project, implement accessibility, and submit pull requests.

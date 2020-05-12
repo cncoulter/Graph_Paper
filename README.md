@@ -44,12 +44,13 @@ Graph Paper is a Jekyll website integrated with Bootstrap and packed with featur
 * ~~Add Lorem Ipsum blog posts (to display blog pagination)~~
 * ~~Reuse compliant~~
 * ~~Documentation: About This Site~~
+* ~~Add blog post~~
 
+* Documentation: Fork: edit Bootstrap
 * Documentation: Code/in-line documentation & comments
+* Documentation: more info about licensing
 
-* Add blog post
 * Invite people to share their forks
-* Allow folks to donate me to via PayPal and kofi?
 * Google Analytics
 
 ## Copyright & Licensing
