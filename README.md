@@ -45,10 +45,10 @@ Graph Paper is a Jekyll website integrated with Bootstrap and packed with featur
 * ~~Reuse compliant~~
 * ~~Documentation: About This Site~~
 * ~~Add blog post~~
+* ~~Documentation: more info about licensing~~
 
 * Documentation: Fork: edit Bootstrap
 * Documentation: Code/in-line documentation & comments
-* Documentation: more info about licensing
 
 * Invite people to share their forks
 * Google Analytics
