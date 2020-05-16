@@ -52,6 +52,7 @@ Graph Paper is a Jekyll website integrated with Bootstrap and packed with featur
 
 * Invite people to share their forks
 * Google Analytics
+* update the below from "About this Site"
 
 ## Copyright & Licensing
 
