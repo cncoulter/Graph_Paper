@@ -40,6 +40,23 @@ If any field is marked as required, make sure you put in some value for it. If i
 
 ---
 
+# Customize Bootstrap and CSS
+
+For reference, here is how Bootstrap was integrated into Jekyll/Graph Paper:
+
+* The Bootstrap v4.5.0 [source files](https://getbootstrap.com/docs/4.5/getting-started/download/#source-files) were downloaded
+* `bootstrap-4.5.0/scss/*` were copied to `Graph_Paper/css/bootstrap/`
+* `Graph_Paper/css/main.scss` imports `Graph_Paper/css/bootstrap/bootstrap.scss`
+* The footer of each page in Graph Paper links to jQuery, Popper.js, and Bootstrap [JavaScript plugins](https://getbootstrap.com/docs/4.5/getting-started/introduction/#js)
+
+This setup allows you to customize Bootstrap CSS, although it does not allow you to customize Bootstrap JavaScript.
+
+If you want to customize Bootstrap variables, you can make changes in `Graph_Paper/css/custom/_variables.scss` that will override Bootstrap defaults.
+
+If you want to add your own custom CSS rules or classes, make changes to `css/main.scss`.
+
+---
+
 # Multiple Authors
 
 Graph Paper is designed to support [multiple authors]({{ site.baseurl }}/people/). Once you set up a new author, it's easy to mark them as a post's author and have their bio automatically included below the post. Graph Paper will also display links to an author's website, email, and social media profiles, and you can also set up an personal [Atom feed](https://en.wikipedia.org/wiki/Atom_(Web_standard)) for each author that shares their posts. Additionally, each author gets [their own page]({{ site.baseurl }}/people/Lorri-Ipsum) which displays their bio, links, photo, and posts.
@@ -277,4 +294,4 @@ is rendered as:
 
 After you finish forking Graph Paper to make your own website, let us know!
 
-Send Cam a [tweet](https://twitter.com/camncoulter) or an [email](https://www.cncoulter.com/about/), or if you want, you can write a blog post which shows off your site and explains how you set it up. You can email your blog post to Cam or submit it via pull request. We ask that any blog posts you send us are licensed under a [Creative Commons license](https://creativecommons.org/).
+Send Cam a [tweet](https://twitter.com/camncoulter) or an [email](https://www.cncoulter.com/about/), or if you want, submit a blog post that shows off your site and explains how you set it up. You can email your blog post to Cam or submit it via pull request. We ask that any blog posts you send us are licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a> (CC BY-SA 4.0).

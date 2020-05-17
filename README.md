@@ -47,8 +47,8 @@ Graph Paper is a Jekyll website integrated with Bootstrap and packed with featur
 * ~~Add blog post~~
 * ~~Documentation: more info about licensing~~
 * ~~Upgrade to Bootstrap v4.5.0~~
+* ~~Documentation: Fork: edit Bootstrap~~
 
-* Documentation: Fork: edit Bootstrap
 * Documentation: Code/in-line documentation & comments
 
 * Google Analytics
