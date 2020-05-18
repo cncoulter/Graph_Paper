@@ -12,7 +12,7 @@ title: About
 
 # Features
 
-<p class="lead">It's easier to remove code than to write it, so Graph Paper aims to implement every feature you can reasonably expect Jekyll to support. That way, you can quickly delete what you don't need, customize what you want, and get up and running.</p>
+<p class="lead">Graph Paper aims to implement every feature you can reasonably expect Jekyll to support. That way, you can quickly delete what you don't need, customize what you want, and get up and running.</p>
 
 * Graph Paper uses [Font Awesome](https://fontawesome.com/) to incorporate **beautiful icons**: <i class="fas fa-tag"></i> <i class="fas fa-folder-open"></i> <i class="far fa-calendar-alt"> <i class="fab fa-twitter"></i>
 * Graph Paper makes it easy to set up your **favicon**.
@@ -34,4 +34,3 @@ There are a couple features that we haven't added support for yet. Feel free to 
 
 * A search widget
 * Add line numbers to code blocks
-* Make the site as accessible as possible
