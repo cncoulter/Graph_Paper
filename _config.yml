@@ -25,7 +25,7 @@ default_meta_image: notepad-593363_1920.jpg # Not required. This is the default 
 default_meta_image_alt: "graph paper and a pen" # Required IF you have a default_meta_image
 
 # Google Analytics
-# google_analytics: UA-XXXXXXXX-X # Required if you want to use Google Analytics. Make sure you replace this code with your own.
+google_analytics: UA-37246275-2 # Required if you want to use Google Analytics. Make sure you replace this code with your own.
 
 # Collections
 collections_dir: collections
