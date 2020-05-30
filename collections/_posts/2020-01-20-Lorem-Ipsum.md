@@ -4,8 +4,8 @@
 layout: post
 published: true
 title: "Lorem Ipsum (3 of 3)"
-date: 2020-01-20 09:00
-date_modified: 2020-01-25 13:00
+date: 2020-03-01 09:00
+date_modified: 2020-03-15 13:00
 author: lorri # This should be a person's code_name from your people collection
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dapibus nec odio sit amet sollicitudin.
 categories:

@@ -4,7 +4,7 @@
 layout: post
 published: true
 title: "Welcome to Graph Paper!"
-date: 2020-05-11 17:56
+date: 2020-05-30 16:13
 author: cam # This should be a person's code_name from your people collection
 description: It is my great pleasure to finally release Graph Paper! This is a project that I've been working on sporadically over the past year. Graph Paper is a Jekyll website/blog, integrated with Bootstrap, that’s ready for you to fork.
 categories:

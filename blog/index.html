@@ -38,7 +38,7 @@ title: Blog
                         <a href="{{ author.url }}">{{ author.title }}</a>
                         <span class="font-weight-light">|</span>
                         <i class="far fa-calendar-alt"></i>
-                        {{ post.date | date: "%b. %e, %Y" }}
+                        {{ post.date | date: "%B %e, %Y" }}
                         {% if post.categories != empty %}
                             <span class="font-weight-light text-muted">|</span>
                             {% for category in post.categories %}

@@ -24,7 +24,7 @@ layout: default
 
                 <!-- Date/Time & Categories -->
                 <p class="text-muted">
-                    <i class="far fa-calendar-alt"></i> Posted on {{ page.date | date: "%b. %e, %Y at %l:%M %p %Z" }}
+                    <i class="far fa-calendar-alt"></i> Posted on {{ page.date | date: "%B %e, %Y at %l:%M %p %Z" }}
                     {% if page.categories != empty %}
                         {% for category in page.categories %}
                             <a href="{{ site.baseurl }}/blog/categories#{{ category }}" class="badge badge-tag mr-1"><i class="fas fa-folder-open"></i> {{ category }}</a>
@@ -32,7 +32,7 @@ layout: default
                     {% endif %}
                     {% if page.date_modified != null %}
                         <br />
-                        <i class="far fa-clock"></i> Modified on {{ page.date_modified | date: "%b. %e, %Y at %l:%M %p %Z" }}
+                        <i class="far fa-clock"></i> Modified on {{ page.date_modified | date: "%B %e, %Y at %l:%M %p %Z" }}
                     {% endif %}
                 </p>
 
