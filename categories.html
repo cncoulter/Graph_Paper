@@ -7,22 +7,26 @@ title: "Categories"
 ---
 
 <!-- Initial Tag List -->
-{% assign categories_list = site.categories | sort %}
+<section>
+    {% assign categories_list = site.categories | sort %}
 
-<p class="text-center my-3">
-{% for category in categories_list %}
-    <a href="{{ site.baseurl }}/blog/categories#{{ category[0] }}" class="btn btn-outline-primary my-1">
-        <i class="fas fa-folder-open"></i>
-        {{ category[0] }}
-    </a>
-{% endfor %}
-</p>
+    <p class="text-center my-3">
+    {% for category in categories_list %}
+        <a href="{{ site.baseurl }}/blog/categories#{{ category[0] }}" class="btn btn-outline-primary my-1">
+            <i class="fas fa-folder-open"></i>
+            {{ category[0] }}
+        </a>
+    {% endfor %}
+    </p>
+</section>
 
 <!-- List out all posts for reach tag -->
 {% for category in categories_list %}
-    <div id="{{ category[0] }}" class="card my-3">
+    <section id="{{ category[0] }}" class="card my-3">
         <div class="card-body">
-            <h4 class="card-title">{{ category[0] }}</h4>
+            <header>
+                <h4 class="card-title">{{ category[0] }}</h4>
+            </header>
             <ul class="card-text">
             {% for post in category.last %}
                   <li><span class="font-weight-light text-muted">{{ post.date | date: "%e %B %Y" }}:</span> <a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -37,7 +41,7 @@ title: "Categories"
                 {{ category[1].size }} posts
             {% endif %}
         </div>
-    </div>
+    </section>
 {% endfor %}
 
 {% assign categories_list = nil %}

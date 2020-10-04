@@ -4,13 +4,13 @@
 layout: default
 ---
 <!-- Page Content-->
-<article>
-    <div class="container">
-        <div class="row justify-content-center">
+<article class="container">
+    <div class="row justify-content-center">
 
-            <!-- Column: Post Content -->
-            <div class="col-lg-8">
+        <!-- Column: Post Content -->
+        <div class="col-lg-8">
 
+            <header>
                 <!-- Title -->
                 <h1 class="mt-4">{{ page.title }}</h1>
 
@@ -35,13 +35,15 @@ layout: default
                         <i class="far fa-clock"></i> Modified on {{ page.date_modified | date: "%B %e, %Y at %l:%M %p %Z" }}
                     {% endif %}
                 </p>
+            </header>
 
-                <!-- Featured Image -->
-                {% include image.html file=page.image %}
+            <!-- Featured Image -->
+            {% include image.html file=page.image %}
 
-                <!-- Post Content -->
-                <div>{{ content }}</div>
+            <!-- Post Content -->
+            <div>{{ content }}</div>
 
+            <footer>
                 <!-- Post Footer: Tags -->
                 {% if page.tags != empty %}
                 <p class="text-center">
@@ -81,7 +83,7 @@ layout: default
                 {% include disqus_comments.html %}
                 {% endif %}
 
-            </div>
+            </footer>
         </div>
     </div>
 </article>
