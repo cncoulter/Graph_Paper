@@ -3,8 +3,8 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 ---
 
-@import 'bootstrap/bootstrap';
 @import 'custom/_variables.scss';
+@import 'bootstrap/bootstrap';
 @import 'syntax-highlight';
 
 .badge-tag {
