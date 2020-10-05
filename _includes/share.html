@@ -5,7 +5,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
 <p class="text-center">
 
-    <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ author.twitter }}" class="btn btn-outline-primary my-1">
+    <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url }}&via={{ author.twitter }}" class="btn btn-outline-primary my-1">
         <i class="fab fa-twitter"></i>
         Share on Twitter
     </a>
