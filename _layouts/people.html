@@ -9,7 +9,7 @@ layout: default
     <div class="container">
 
         <!-- Row 1: Name, Bio, Links, Photo -->
-        <section class="row justify-content-center">
+        <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="row">
 
@@ -22,7 +22,7 @@ layout: default
                         <!-- Bio -->
                         <div class="mt-2">{{ content }}</div>
                         <!-- Links -->
-                        <span class="text-center">{%- include socialmedia_page.html -%}</span>
+                        <div class="text-center">{%- include socialmedia_page.html -%}</div>
                     </div>
 
                     <!-- Row 1, Col 2: Photo -->
@@ -31,7 +31,7 @@ layout: default
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Row 2: List all blog posts by person -->
         <section class="row justify-content-center">
