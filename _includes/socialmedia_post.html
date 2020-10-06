@@ -7,112 +7,126 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
     {% if author.website %}
         <li class="list-inline-item">
-            <a href="{{ author.website }}" data-toggle="tooltip" data-placement="bottom" title="Website">
+            <a href="{{ author.website }}" data-toggle="tooltip" data-placement="bottom" title="Website" class="icon-link">
                 <i class="fas fa-globe-americas"></i>
+                <span class="sr-only">Personal Website</span>
             </a>
         </li>
     {% endif %}
 
     {% if author.facebook %}
         <li class="list-inline-item">
-            <a href="https://facebook.com/{{ author.facebook }}" data-toggle="tooltip" data-placement="bottom" title="Facebook">
+            <a href="https://facebook.com/{{ author.facebook }}" data-toggle="tooltip" data-placement="bottom" title="Facebook" class="icon-link">
                 <i class="fab fa-facebook-square"></i>
+                <span class="sr-only">Facebook</span>
             </a>
         </li>
     {% endif %}
 
     {% if author.instagram %}
         <li class="list-inline-item">
-            <a href="https://instagram.com/{{ author.instagram }}" data-toggle="tooltip" data-placement="bottom" title="Instagram">
+            <a href="https://instagram.com/{{ author.instagram }}" data-toggle="tooltip" data-placement="bottom" title="Instagram" class="icon-link">
                 <i class="fab fa-instagram"></i>
+                <span class="sr-only">Instagram</span>
             </a>
         </li>
     {% endif %}
 
     {% if author.twitter %}
         <li class="list-inline-item">
-            <a href="https://twitter.com/{{ author.twitter }}" data-toggle="tooltip" data-placement="bottom" title="Twitter">
+            <a href="https://twitter.com/{{ author.twitter }}" data-toggle="tooltip" data-placement="bottom" title="Twitter" class="icon-link">
                 <i class="fab fa-twitter"></i>
+                <span class="sr-only">Twitter</span>
             </a>
         </li>
     {% endif %}
 
     {% if author.tumblr %}
         <li class="list-inline-item">
-            <a href="https://twitter.com/{{ author.tumblr }}" data-toggle="tooltip" data-placement="bottom" title="Tumblr">
+            <a href="https://twitter.com/{{ author.tumblr }}" data-toggle="tooltip" data-placement="bottom" title="Tumblr" class="icon-link">
                 <i class="fab fa-tumblr-square"></i>
+                <span class="sr-only">Tumblr</span>
             </a>
         </li>
     {% endif %}
 
     {% if author.patreon %}
         <li class="list-inline-item">
-            <a href="https://www.patreon.com/{{ author.patreon }}" data-toggle="tooltip" data-placement="bottom" title="Patreon">
+            <a href="https://www.patreon.com/{{ author.patreon }}" data-toggle="tooltip" data-placement="bottom" title="Patreon" class="icon-link">
                 <i class="fab fa-patreon"></i>
+                <span class="sr-only">Patreon</span>
             </a>
         </li>
     {% endif %}
 
     {% if author.youtube %}
         <li class="list-inline-item">
-            <a href="https://youtube.com/{{ author.youtube }}" data-toggle="tooltip" data-placement="bottom" title="Youtube">
+            <a href="https://youtube.com/{{ author.youtube }}" data-toggle="tooltip" data-placement="bottom" title="Youtube" class="icon-link">
                 <i class="fab fa-youtube"></i>
+                <span class="sr-only">Youtube</span>
             </a>
         </li>
     {% endif %}
 
     {% if author.spotify %}
         <li class="list-inline-item">
-            <a href="https://spotify.com/{{ author.spotify }}" data-toggle="tooltip" data-placement="bottom" title="Spotify">
+            <a href="https://spotify.com/{{ author.spotify }}" data-toggle="tooltip" data-placement="bottom" title="Spotify" class="icon-link">
                 <i class="fab fa-spotify"></i>
+                <span class="sr-only">Spotify</span>
             </a>
         </li>
     {% endif %}
 
     {% if author.bandcamp %}
         <li class="list-inline-item">
-            <a href="https://bandcamp.com/{{ author.bandcamp }}" data-toggle="tooltip" data-placement="bottom" title="Bandcamp">
+            <a href="https://bandcamp.com/{{ author.bandcamp }}" data-toggle="tooltip" data-placement="bottom" title="Bandcamp" class="icon-link">
                 <i class="fab fa-bandcamp"></i>
+                <span class="sr-only">Bandcamp</span>
             </a>
         </li>
     {% endif %}
 
     {% if author.linkedin %}
         <li class="list-inline-item">
-            <a href="https://linkedin.com/in/{{ author.linkedin }}" data-toggle="tooltip" data-placement="bottom" title="LinkedIn">
+            <a href="https://linkedin.com/in/{{ author.linkedin }}" data-toggle="tooltip" data-placement="bottom" title="LinkedIn" class="icon-link">
                 <i class="fab fa-linkedin"></i>
+                <span class="sr-only">LinkedIn</span>
             </a>
         </li>
     {% endif %}
 
     {% if author.github %}
         <li class="list-inline-item">
-            <a href="https://github.com/{{ author.github }}" data-toggle="tooltip" data-placement="bottom" title="GitHub">
+            <a href="https://github.com/{{ author.github }}" data-toggle="tooltip" data-placement="bottom" title="GitHub" class="icon-link">
                 <i class="fab fa-github"></i>
+                <span class="sr-only">GitHub</span>
             </a>
         </li>
     {% endif %}
 
     {% if author.paypal %}
         <li class="list-inline-item">
-            <a href="https://paypal.me/{{ author.paypal }}" data-toggle="tooltip" data-placement="bottom" title="PayPal">
+            <a href="https://paypal.me/{{ author.paypal }}" data-toggle="tooltip" data-placement="bottom" title="PayPal" class="icon-link">
                 <i class="fab fa-paypal"></i>
+                <span class="sr-only">PayPal</span>
             </a>
         </li>
     {% endif %}
 
     {% if author.email %}
         <li class="list-inline-item">
-            <a href="mailto:{{ author.email }}" data-toggle="tooltip" data-placement="bottom" title="Email">
+            <a href="mailto:{{ author.email }}" data-toggle="tooltip" data-placement="bottom" title="Email" class="icon-link">
                 <i class="far fa-envelope"></i>
+                <span class="sr-only">Email</span>
             </a>
         </li>
     {% endif %}
 
     {% if author.feed %}
         <li class="list-inline-item">
-            <a href="{{ author.url }}feed.xml" data-toggle="tooltip" data-placement="bottom" title="Feed">
+            <a href="{{ author.url }}feed.xml" data-toggle="tooltip" data-placement="bottom" title="Feed" class="icon-link">
                 <i class="fas fa-rss"></i>
+                <span class="sr-only">RSS</span>
             </a>
         </li>
     {% endif %}
