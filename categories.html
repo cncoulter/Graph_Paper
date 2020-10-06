@@ -12,7 +12,7 @@ title: "Categories"
 
     <p class="text-center my-3">
     {% for category in categories_list %}
-        <a href="{{ site.baseurl }}/blog/categories#{{ category[0] }}" class="btn btn-outline-primary my-1">
+        <a href="{{ site.baseurl }}/blog/categories#{{ category[0] | url_encode }}" class="btn btn-outline-primary my-1">
             <i class="fas fa-folder-open"></i>
             {{ category[0] }}
         </a>
@@ -22,7 +22,7 @@ title: "Categories"
 
 <!-- List out all posts for reach tag -->
 {% for category in categories_list %}
-    <section id="{{ category[0] }}" class="card my-3">
+    <section id="{{ category[0] | url_encode }}" class="card my-3">
         <div class="card-body">
             <header>
                 <h4 class="card-title">{{ category[0] }}</h4>

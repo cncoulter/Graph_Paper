@@ -42,10 +42,10 @@ title: Blog
                         {% if post.categories != empty %}
                             <span class="font-weight-light text-muted">|</span>
                             {% for category in post.categories %}
-                                <a href="{{ site.baseurl }}/blog/categories#{{ category }}" class="badge badge-tag mr-1">
+                                <a href="{{ site.baseurl }}/blog/categories#{{ category | url_encode }}" class="badge badge-tag mr-1">
                                     <i class="fas fa-folder-open"></i>
                                     {{ category }}
-                                </a> <!-- TK may have screwed this up -->
+                                </a>
                             {% endfor %}
                         {% endif %}
                     </p>
