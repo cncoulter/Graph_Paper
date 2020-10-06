@@ -18,15 +18,13 @@ a:focus {
     text-decoration: underline;
 }
 
-a.icon-link:hover {
+a.icon-link:hover, a.icon-link:focus {
     color: $primary;
     background-color: #f8f9fa;
     outline: 3px solid black;
 }
 
-a.icon-link:focus {
-    color: $primary;
-    background-color: #f8f9fa;
+a.image-link:hover, a.image-link:focus {
     outline: 3px solid black;
 }
 
