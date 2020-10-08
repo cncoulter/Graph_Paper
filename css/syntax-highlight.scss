@@ -1,6 +1,7 @@
 /*
 SPDX-FileCopyrightText: 2017 Richard Leland <rich.leland@avaaz.org>
 SPDX-FileCopyrightText: 2017 Chad Smith <grassfedcode@gmail.com>
+SPDX-FileCopyrightText: 2020 Cam N. Coulter <cam@cncoulter.com>
 SPDX-License-Identifier: Unlicense
 */
 
@@ -42,8 +43,8 @@ SPDX-License-Identifier: Unlicense
 .highlight .kt { color: #204a87; font-weight: bold } /* Keyword.Type */
 .highlight .ld { color: #000000 } /* Literal.Date */
 .highlight .m { color: #0000cf; font-weight: bold } /* Literal.Number */
-.highlight .s { color: #4e9a06 } /* Literal.String */
-.highlight .na { color: #c4a000 } /* Name.Attribute */
+.highlight .s { color: #47800A } /* Literal.String - Updated by Cam to a darker shade for better color contrast */
+.highlight .na { color: #806800 } /* Name.Attribute - Updated by Cam to a darker shade for better color contrast */
 .highlight .nb { color: #204a87 } /* Name.Builtin */
 .highlight .nc { color: #000000 } /* Name.Class */
 .highlight .no { color: #000000 } /* Name.Constant */
