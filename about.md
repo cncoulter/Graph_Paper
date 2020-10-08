@@ -10,7 +10,7 @@ title: About
 
 {% include image.html file="notepad-593363_1920.jpg" %}
 
-# Features
+## Features
 
 <p class="lead">Graph Paper aims to implement every feature you can reasonably expect Jekyll to support. That way, you can quickly delete what you don't need, customize what you want, and get up and running.</p>
 
@@ -28,7 +28,7 @@ title: About
 * Graph Paper supports **RSS feeds**, both for the site as a whole and for individual authors. Like with SEO, Graph Paper's RSS feeds are custom-coded (they don't rely on the jekyll-feed plugin), which means they are robust and detailed out-of-the-box and easily allow you to modify them to suit your own needs.
 * Graph Paper includes support for **comments** via [Disqus](https://disqus.com/)
 
-# Missing Features
+## Missing Features
 
 There are a couple features that we haven't added support for yet. Feel free to contribute these if you wish!
 

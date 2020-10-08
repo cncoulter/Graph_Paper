@@ -24,7 +24,7 @@ title: "Tags"
 {% for tag in tags_list %}
     <section id="{{ tag[0] | url_encode }}" class="card my-3">
         <div class="card-body">
-            <h4 class="card-title">{{ tag[0] }}</h4>
+            <h2 class="h4 card-title">{{ tag[0] }}</h2>
             <ul class="card-text">
             {% for post in tag.last %}
                   <li><span class="font-weight-light text-muted">{{ post.date | date: "%e %B %Y" }}:</span> <a href="{{ post.url }}">{{ post.title }}</a></li>

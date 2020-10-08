@@ -12,14 +12,14 @@ title: People
             <li class="media">
                 <img src="{{ site.url }}/img/{{ person.photo }}" class="mr-3 rounded" width="75" alt="Author photo">
                 <div class="media-body">
-                  <h5 class="mt-0 mb-1"><a href="{{ person.url }}">{{ person.title }}</a></h5>
+                  <h2 class="h5 mt-0 mb-1"><a href="{{ person.url }}">{{ person.title }}</a></h2>
                   {{ person.content }}
                 </div>
             </li>
         {% else %}
         <li class="media">
             <div class="media-body">
-              <h5 class="mt-0 mb-1"><a href="{{ person.url }}">{{ person.title }}</a></h5>
+              <h2 class="h5 mt-0 mb-1"><a href="{{ person.url }}">{{ person.title }}</a></h2>
               {{ person.content }}
             </div>
         </li>

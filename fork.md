@@ -6,9 +6,9 @@ permalink: /fork/
 title: Fork
 ---
 
-# Initial Setup
+## Initial Setup
 
-## Jekyll
+### Jekyll
 
 First, install [Jekyll](https://jekyllrb.com/docs/).
 
@@ -18,7 +18,7 @@ Next, you'll need to install the following Ruby gems: `jekyll-paginate jekyll-re
 $ gem install jekyll-paginate jekyll-redirect-from jekyll-sitemap
 ```
 
-## Git
+### Git
 
 Make sure you have [Git](https://git-scm.com/) installed. Then, clone this project:
 
@@ -26,7 +26,7 @@ Make sure you have [Git](https://git-scm.com/) installed. Then, clone this proje
 $ git clone https://github.com/cncoulter/graph-paper/
 ```
 
-## Configuration
+### Configuration
 
 Your `_config.yml` file is where Jekyll stores the settings that affect your whole blog, so if you're forking Graph Paper to make your own website, start by updating `_config.yml`.
 
@@ -40,7 +40,7 @@ If any field is marked as required, make sure you put in some value for it. If i
 
 ---
 
-# Customize Bootstrap and CSS
+## Customize Bootstrap and CSS
 
 For reference, here is how Bootstrap was integrated into Jekyll/Graph Paper:
 
@@ -57,7 +57,7 @@ If you want to add your own custom CSS rules or classes, make changes to `css/ma
 
 ---
 
-# Multiple Authors
+## Multiple Authors
 
 Graph Paper is designed to support [multiple authors]({{ site.baseurl }}/people/). Once you set up a new author, it's easy to mark them as a post's author and have their bio automatically included below the post. Graph Paper will also display links to an author's website, email, and social media profiles, and you can also set up an personal [Atom feed](https://en.wikipedia.org/wiki/Atom_(Web_standard)) for each author that shares their posts. Additionally, each author gets [their own page]({{ site.baseurl }}/people/Lorri-Ipsum) which displays their bio, links, photo, and posts.
 For all of this to work smoothly, however, it does take a little bit of work to set up a new author.
@@ -124,7 +124,7 @@ Now, your new author is all set up with their own [author page]({{ site.baseurl 
 
 ---
 
-# Images
+## Images
 
 Like with authors, it takes a little work to set up images in Graph Paper. However, once you get it set up, it's easy to include featured images with blog posts that display on the post itself, on archive pages, and when shared on social media (through Twitter card support --- see `_includes/SEO.html`).
 
@@ -140,7 +140,7 @@ Additionally, if you want to add an image anywhere else in the site, just use th
 
 {% include image.html file="glenn-carstens-peters-0iB6_GX7BXk-unsplash.jpg" %}
 
-## Image Metadata
+### Image Metadata
 
 You should store all of your images in `img/`.
 
@@ -169,9 +169,9 @@ Image by <a href="https://pixabay.com/users/StartupStockPhotos-690514/?utm_sourc
 
 Finally, the main text in this file is the caption that will be displayed below the image. As you can see, you can use HTML to add links or particular formatting to the caption.
 
-## Using Images
+### Using Images
 
-### As Featured Images
+#### As Featured Images
 
 To set an image as a featured image for a post or page, include this line in the page's YAML preface:
 
@@ -185,7 +185,7 @@ On the post (`layout: post`), the featured image will automatically display at t
 
 On a page (`layout: page`), the featured image will not automatically display. However, if the page is shared on social media, the featured image will be shown (through Twitter card support --- again, see `_includes/SEO.html`).
 
-### On a Page
+#### On a Page
 
 If you want to use an image on a page or in a post without labeling it as the featured image, simply use the include statement below.
 
@@ -197,13 +197,13 @@ If you want to use an image on a page or in a post without labeling it as the fe
 
 ---
 
-# Posts
+## Posts
 
 Once you get authors and images set up, adding new posts is easy.
 
 Store your posts in `collections/_posts/`.
 
-## YAML Frontmatter
+### YAML Frontmatter
 
 What [YAML frontmatter](https://jekyllrb.com/docs/front-matter/) should you include with your posts? There's an unpublished template that you can use as a reference: `collections/_posts/2020-01-01-Unpublished-Template.md`. It looks like this:
 
@@ -250,11 +250,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dapibus nec odi
 
 `excerpt_separator:` is optional. By default, Graph Paper displays post excerpts on archive pages. By default, [Jekyll selects the first paragraph](https://jekyllrb.com/docs/posts/#post-excerpts) of a post as the excerpt. If you want more paragraphs to be included in the excerpt, then include `excerpt_separator: [//]: #more` in the YAML frontmatter and place `[//]: #more` to mark where you want the excerpt to end. If you leave `excerpt_separator: [//]: #more` *and don't include* `[//]: #more` somewhere in the file, Jekyll will by default excerpt *the entire post*. Therefore, you should either (1) delete this line from the YAML frontmatter and the post's excerpt will be its first paragraph, or (2) include this line and make sure you place `[//]: #more` somewhere in the post.
 
-## Headings
+### Headings
 
 The post title is formatted as `<h1>`, so make sure any section headings in a post start with `<h2>`. (When `layout: page`, Graph Paper styles the title as `<h1 class="display-4">`, so pages in Graph Paper can be styled starting with regular `<h1>`.)
 
-## Syntax Highlighting
+### Syntax Highlighting
 
 You can use backticks to style a word or a phrase as code. For example: \`code\` appears as `code`.
 
@@ -290,7 +290,7 @@ is rendered as:
 
 ---
 
-# Share!
+## Share!
 
 After you finish forking Graph Paper to make your own website, let us know!
 

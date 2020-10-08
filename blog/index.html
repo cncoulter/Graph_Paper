@@ -28,7 +28,7 @@ title: Blog
                     {% endif %}
 
 					<!-- Post Title -->
-                    <h1 class="mt-2"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+                    <h2 class="h1 mt-2"><a href="{{ post.url }}">{{ post.title }}</a></h2>
 
                     <!-- Author, Date, & Categories -->
                     {% if post.author %}
@@ -119,7 +119,7 @@ title: Blog
 
                 <!-- Side Widget: Archive, RSS Feed, Categories, & Tags -->
                 <div class="card mt-4">
-                    <h5 class="card-header">Read More</h5>
+                    <h2 class="h5 card-header">Read More</h2>
                     <div class="card-body">
                         <div class="row justify-content-center">
                             <a href="/blog/archive" class="card-link btn btn-outline-primary m-1"><i class="fas fa-archive"></i> Archive</a>
@@ -132,7 +132,7 @@ title: Blog
 
                 <!-- Side Widget: Recent Posts -->
                 <div class="card mt-4">
-                    <h5 class="card-header">Recent Posts</h5>
+                    <h2 class="h5 card-header">Recent Posts</h2>
                     <div class="list-group list-group-flush">
                         {% for post in site.posts limit:5 %}
                         <a href="{{ site.baseurl }}{{ post.url }}" class="list-group-item list-group-item-action">
