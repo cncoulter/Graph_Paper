@@ -7,6 +7,10 @@
 @import 'bootstrap/bootstrap';
 @import 'syntax-highlight';
 
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.9);
+}
+
 a:hover {
     background-color: $primary;
     color: #FFF;
