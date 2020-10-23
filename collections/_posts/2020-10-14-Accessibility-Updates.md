@@ -6,7 +6,7 @@ published: true
 title: "Accessibility Updates"
 date: 2020-10-21 07:26
 author: cam # This should be a person's code_name from your people collection
-description: Graph Paper has got some accessibility improvements.
+description: Graph Paper just got some accessibility improvements.
 categories:
 - Graph Paper
 tags:
