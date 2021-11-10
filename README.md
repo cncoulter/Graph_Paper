@@ -7,6 +7,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
 **If you want Jekyll + Bootstrap, start here.**
 
+Note: Graph Paper is unmaintained.
+
 Graph Paper is a Jekyll website integrated with Bootstrap and packed with features including support for multiple authors, featured images, tags, Twitter cards, and much more. If you want to design a website using Jekyll and Bootstrap, start by forking Graph Paper.
 
 ## Features
