@@ -24,9 +24,6 @@ twitter: # Used for Twitter Cards
 default_meta_image: notepad-593363_1920.jpg # Not required. This is the default image used for Twitter Cards. Image must be placed in /img/
 default_meta_image_alt: "graph paper and a pen" # Required IF you have a default_meta_image
 
-# Google Analytics
-google_analytics: UA-97611410-2 # Required if you want to use Google Analytics. Make sure you replace this code with your own.
-
 # Collections
 collections_dir: collections
 collections:
