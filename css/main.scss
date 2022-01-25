@@ -29,6 +29,7 @@ a.icon-link:hover, a.icon-link:focus {
 }
 
 a.image-link:hover, a.image-link:focus {
+    display: inline-block;
     outline: 3px solid black;
 }
 
