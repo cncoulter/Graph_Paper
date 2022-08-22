@@ -6,14 +6,14 @@
 # If any field is marked as required, make sure you put in some value for it. If it's marked as required, that's because another page (such as SEO.html) assumes it's there, so if you leave the field blank, then your SEO settings (for example) will get messed up.
 
 title: Graph Paper # Required.
-url: "https://graphpaper.cncoulter.com" # Required.
+url: "https://graphpaper.camcoulter.com" # Required.
 baseurl: "" # the subpath of your site, e.g. /blog
 description:
 - Graph Paper is a Jekyll website integrated with Bootstrap and packed with features including support for multiple authors, featured images, tags, Twitter cards, and much more. If you want to design a website using Jekyll and Bootstrap, start by forking Graph Paper. # Required.
 locale: en_US # Required.
 timezone: America/Los_Angeles
 author: Cam N. Coulter # Required.
-email: cam@cncoulter.com
+email: hi@camcoulter.com
 copyright: "Some rights reserved." # Required.
 favicon: favicon.ico # Required. When forking, you will want to change this file to the favicon you will use for your site. If your favicon is placed in a subfolder (for example, `/img/config/`), then make sure to include the subfolder (for example, `favicon: config/favicon.ico`)
 
